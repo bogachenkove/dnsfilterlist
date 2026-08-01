@@ -29,6 +29,7 @@
 # [generic metrics domain rules]
 /^(?:.*?[_.-])?metr(?:i[ck][sa]?|ical)?\d*(?:[_.-]|$)/$denyallow=metric.gstatic.com
 /^(?:.*?[_.-])?[a-z]{1,3}metric[as][_.-]/
+/^survey[_.-]/
 
 # [generic diagnostics domain rules]
 /^(?:.*?[_.-])?diagnos(?:is|ti[ck][sa]?)?\d*(?:[_.-]|$)/
@@ -51,10 +52,13 @@
 ||player.stats.live-video.net^
 ||serving-sys.com^
 ||serving-sys.ru^
+||d1zhmd1pxxxajf.cloudfront.net^
+||dcbbwymp1bhlf.cloudfront.net^
 
 # [vk.com]
 ||ms.vk.com^
 ||ms.vk.ru^
+||ms.ok.ru^
 ||vk-portal.net^
 ||apptracer.ru^
 ||trace-flow.ru^
@@ -119,6 +123,9 @@
 ||s.youtube.com^
 ||mediation.goog^
 ||xgapromomanager-pa.googleapis.com^
+||appsgrowthpromo-pa.*.google.com^
+||peoplestackwebexperiments-pa.*.google.com^
+||fundingchoicesmessages.google.com^
 
 # [yandex.ru]
 ||mc.yandex.com^
@@ -148,6 +155,8 @@
 ||abt.s3.yandex.net^
 ||amc.yandex.ru^
 ||uaas.yandex.ru^
+||statchecker.yandex.ru^
+||events.plus.yandex.net^
 
 # [liveinternet.ru]
 ||yadro.ru^
@@ -185,6 +194,7 @@
 ||pipe.aria.microsoft.com^
 ||clarity.ms^
 ||appcenter.ms^
+||collector.github.com^
 
 # [meta.com]
 ||an.facebook.com^
@@ -686,14 +696,17 @@
 ||adplay.ru^
 
 # [beeline.ru]
+||rumstat.cdnvideo.ru^
 ||rtb.beeline.ru^
 
 # [adrun.ru]
 ||adrun.ru^
 
 # [alfabank.ru]
-||diginetica.net^
 ||flocktory.com^
+
+# [diginetica.net]
+||diginetica.net^
 
 # [bbj3nb.ru]
 ||bbj3nb.ru^
@@ -919,3 +932,66 @@
 
 # [getintent.com]
 ||getintent.com^
+
+# [crazyegg.com]
+||crazyegg.com^
+
+# [survicate.com]
+||survicate.com^
+
+# [exoclick.com]
+||exacdn.com^
+||pemsrv.com^
+||cdn-fc.com^
+||exoclick.com^
+
+# [jwx.com]
+||jwpltx.com^
+||trueanthem.com^
+||connatix.com^
+
+# [hubspot.com]
+||hsadspixel.net^
+||sgtm-amer.hubspot.com^
+
+# [tuffoonaskant.com]
+||tuffoonaskant.com^
+
+# [trovesleepit.com]
+||trovesleepit.com^
+
+# [hubeamily.com]
+||hubeamily.com^
+
+# [skcrtxr.com]
+||skcrtxr.com^
+
+# [traffmovie.com]
+||traffmovie.com^
+
+# [dd133.com]
+||dd133.com^
+
+# [acscdn.com]
+||acscdn.com^
+
+# [bvtpk.com]
+||bvtpk.com^
+
+# [trafficbass.com]
+||trafficbass.com^
+
+# [effectivecpmnetwork.com]
+||effectivecpmnetwork.com^
+
+# [aaaconnect.info]
+||aaaconnect.info^
+
+# [teletarget.ru]
+||teletarget.ru^
+
+# [iotechnologies.com]
+||onthe.io^
+
+# [pjstat.com]
+||pjstat.com^
