@@ -1,8 +1,8 @@
 ! Title: bogachenko's DNS Blacklist
 ! Description: Yet another anti-bullshit filter list.
-! RAW: https://raw.githubusercontent.com/bogachenko/filterlist/main/bogachenkoBL.dns
+! RAW: https://raw.githubusercontent.com/bogachenko/dnsfilterlist/master/bogachenkoDNS.filterlist
 ! Homepage: https://github.com/bogachenko/filterlist/
-! License: https://raw.githubusercontent.com/bogachenko/filterlist/main/LICENSE.md
+! License: https://raw.githubusercontent.com/bogachenko/dnsfilterlist/master/LICENSE
 
 # [generic ads domain rules]
 /^(?:.*?[_.-])?ad(?:[svx]|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
