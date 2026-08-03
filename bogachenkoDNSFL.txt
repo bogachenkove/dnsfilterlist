@@ -471,6 +471,7 @@
 ||uca.cloud.unity3d.com^
 ||cdp.cloud.unity3d.com^
 ||mediation.unity3d.com^
+||config.uca.cloud.unity3d.com^
 
 # [statad.ru]
 ||statad.ru^
@@ -594,3 +595,37 @@
 
 # [2o7.net]
 ||2o7.net^
+
+# [gameanalytics.com]
+||gameanalytics.com^
+
+# [backtrace.io]
+||backtrace.io^
+
+# [bugsnag.com]
+||bugsnag.com^
+
+# [afafb.com]
+||afafb.com^
+
+# [easybrain.com]
+||consent.easybrain.com^
+||s3-ca-liveops.easybrain.com^
+
+# [thecatmachine.com]
+||thecatmachine.com^
+
+# [everestop.io]
+||everestop.io^
+
+# [blueduckredapple.com]
+||blueduckredapple.com^
+
+# [inner-active.mobi]
+||inner-active.mobi^
+
+# [inmobi.com]
+||inmobi.com^
+
+# [bidmachine.io]
+||bidmachine.io^
