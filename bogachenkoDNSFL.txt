@@ -310,6 +310,9 @@
 # [spotify.com]
 ||aet.spotify.com^
 
+# [scdn.co]
+||adstudio-assets.scdn.co^
+
 # [scorecardresearch.com]
 ||scorecardresearch.com^
 
@@ -329,3 +332,54 @@
 
 # [nelreports.net]
 ||nelreports.net^
+
+# [adform.net]
+||adform.net^
+
+# [hlx.page]
+||rum.hlx.page^
+
+# [clicktale.net]
+||clicktale.net^
+
+# [impactradius-event.com]
+||impactradius-event.com^
+
+# [telecid.ru]
+||telecid.ru^
+
+# [mhverifier.ru]
+||mhverifier.ru^
+
+# [cmediahub.ru]
+||cmediahub.ru^
+
+# [digitaltarget.ru]
+||digitaltarget.ru^
+
+# [rambler.ru]
+||ssp.rambler.ru^
+
+# [traffaret.com]
+||traffaret.com^
+
+# [bidderstack.com]
+||bidderstack.com^
+
+# [bumlam.com]
+||bumlam.com^
+
+# [punchmedia.ru]
+||punchmedia.ru^
+
+# [betweendigital.com]
+||betweendigital.com^
+
+# [getads.ru]
+||getads.ru^
+
+# [bridgertb.tech]
+||bridgertb.tech^
+
+# [my.com]
+||my.com^
