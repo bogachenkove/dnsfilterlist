@@ -173,6 +173,7 @@
 ||googletagservices-cn.com^
 
 # [googleapis.com]
+||ogads-pa.googleapis.com^
 ||firebaselogging.googleapis.com^
 ||crashlyticsreports-pa.googleapis.com^
 ||imasdk.googleapis.com^
@@ -629,3 +630,33 @@
 
 # [bidmachine.io]
 ||bidmachine.io^
+
+# [aditude.io]
+||aditude.io^
+
+# [prebid-server.com]
+||prebid-server.com^
+
+# [confiant-integrations.net]
+||confiant-integrations.net^
+
+# [singular.net]
+||singular.net^
+
+# [x3m.biz]
+||x3m.biz^
+
+# [x3mads.com]
+||x3mads.com^
+
+# [braze.com]
+||braze.com^
+
+# [clevertap-prod.com]
+||clevertap-prod.com^
+
+# [fineboost.com]
+||fineboost.com^
+
+# [umeng.com]
+||umeng.com^
