@@ -18,7 +18,6 @@
 /^pi?x(el)?\d*[_.-]/$denyallow=phncdn.com
 /^(?:.*?[_.-])?analyt(?:ic[as]?|ical)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?count(ers?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?telemetr(?:y|ia|ic[as]?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?sentry\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?log(?:[syx]|g(?:ers?|ing))?\d*(?:[_.-]|$)/
@@ -61,6 +60,7 @@
 # [cloudfront.net]
 ||d1zhmd1pxxxajf.cloudfront.net^
 ||dcbbwymp1bhlf.cloudfront.net^
+||d9r4lqt28t1fm.cloudfront.net^
 
 # [vk.com]
 ||ms.vk.com^
@@ -383,3 +383,95 @@
 
 # [my.com]
 ||my.com^
+
+# [buzzoola.com]
+||buzzoola.com^
+
+# [artfut.com]
+||artfut.com^
+
+# [aprtx.com]
+||aprtx.com^
+
+# [dspgate.ru]
+||dspgate.ru^
+
+# [bonuscake.ru]
+||bonuscake.ru^
+
+# [mb9pzp.ru]
+||mb9pzp.ru^
+
+# [mindbox.ru]
+||mindbox.ru^
+
+# [tapjoy.com]
+||tapjoy.com^
+
+# [tapjoyads.com]
+||tapjoyads.com^
+
+# [unity3d.com]
+||iads.unity3d.com^
+||unityads.unity3d.com^
+||uca.cloud.unity3d.com^
+||cdp.cloud.unity3d.com^
+||mediation.unity3d.com^
+
+# [statad.ru]
+||statad.ru^
+
+# [unhappyweakness.com]
+||unhappyweakness.com^
+
+# [acdcdn.com]
+||acdcdn.com^
+
+# [appsflyer.com]
+||appsflyer.com^
+
+# [appsflyersdk.com]
+||appsflyersdk.com^
+
+# [deltarockme.com]
+||deltarockme.com^
+
+# [vak345.com]
+||vak345.com^
+
+# [tiktokv.com]
+||mon-*.tiktokv.com^
+||tnc-*.tiktokv.com^
+
+# [tiktokpangle.us]
+||tiktokpangle.us^
+
+# [tiktokpangle-cdn-us.com]
+||lf-static.tiktokpangle-cdn-us.com^
+
+# [tobsnssdk.com]
+||toblog.tobsnssdk.com^
+
+# [tiktokpangle-b.us]
+||api16-access-ttp.tiktokpangle-b.us^
+||api16-access-ttp-b.tiktokpangle-b.us^
+
+# [applovin.com]
+||applovin.com^
+
+# [applvn.com]
+||applvn.com^
+
+# [news-headlines.co]
+||news-headlines.co^
+
+# [rutube.ru]
+||a.rutube.ru^
+||ac.rutube.ru^
+||goya.rutube.ru^
+
+# [sorrybizzy.xyz]
+||sorrybizzy.xyz^
+
+# [zanapredoaxent.xyz]
+||zanapredoaxent.xyz^
