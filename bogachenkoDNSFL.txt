@@ -7,7 +7,7 @@
 # [generic ads domain rules]
 /^v(ast|paid)[_.-]/
 /^(?:.*?[_.-])?ad(?:[svx]|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adser(?:v(?:ices?|ers?|ing|e)?|s)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adse?r(?:v(?:ices?|ers?|ing|e|r)?|s)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?rekl?(ama?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
@@ -19,6 +19,7 @@
 /^(?:.*?[_.-])?analyt(?:ic[as]?|ical)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?count(ers?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?telemetr(?:y|ia|ic[as]?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?sentry\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?log(?:[syx]|g(?:ers?|ing))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?logser(?:v(?:ices?|ers?|ing|e)?|s)?\d*(?:[_.-]|$)/
@@ -255,7 +256,11 @@
 
 # [sentry.io]
 ||sentry.io^
+
+# [sentry-cdn.com]
 ||sentry-cdn.com^
+
+# [getsentry.com]
 ||getsentry.com^
 
 # [avito.ru]
@@ -292,10 +297,17 @@
 ||stmtag.ru^
 
 # [microsoft.com]
+||pipe.aria.microsoft.com^
 ||data.microsoft.com^
 
 # [windows.com]
 ||wns.windows.com^
+
+# [adnxs.com]
+||adnxs.com^
+
+# [appcenter.ms]
+||appcenter.ms^
 
 # [clarity.ms]
 ||clarity.ms^
@@ -336,6 +348,30 @@
 # [adform.net]
 ||adform.net^
 
+# [adform.com]
+||adform.com^
+
+# [admedia.com]
+||admedia.com^
+
+# [adsterra.com]
+||adsterra.com^
+
+# [amplitude.com]
+||amplitude.com^
+
+# [applift.com]
+||applift.com^
+
+# [mopub.com]
+||mopub.com^
+
+# [appnext.com]
+||appnext.com^
+
+# [appodeal.com]
+||appodeal.com^
+
 # [hlx.page]
 ||rum.hlx.page^
 
@@ -359,6 +395,24 @@
 
 # [rambler.ru]
 ||ssp.rambler.ru^
+
+# [top100.ru]
+||top100.ru^
+
+# [adjust.com]
+||adjust.com^
+
+# [adjust.net.in]
+||adjust.net.in^
+
+# [adjust.io]
+||adjust.io^
+
+# [adjust.world]
+||adjust.world^
+
+# [adj.st]
+||adj.st^
 
 # [traffaret.com]
 ||traffaret.com^
@@ -440,8 +494,8 @@
 ||vak345.com^
 
 # [tiktokv.com]
-||mon-*.tiktokv.com^
-||tnc-*.tiktokv.com^
+||mon*-*.tiktokv.com^
+||tnc*-*.tiktokv.com^
 
 # [tiktokpangle.us]
 ||tiktokpangle.us^
@@ -453,8 +507,7 @@
 ||toblog.tobsnssdk.com^
 
 # [tiktokpangle-b.us]
-||api16-access-ttp.tiktokpangle-b.us^
-||api16-access-ttp-b.tiktokpangle-b.us^
+||api*-ttp*.tiktokpangle-b.us^
 
 # [applovin.com]
 ||applovin.com^
@@ -475,3 +528,69 @@
 
 # [zanapredoaxent.xyz]
 ||zanapredoaxent.xyz^
+
+# [wildberries.ru]
+||marketing-info.wildberries.ru^
+||personal-clusters.wildberries.ru^
+||journal-bt.wildberries.ru^
+
+# [weborama.com]
+||weborama.com^
+
+# [weborama.fr]
+||weborama.fr^
+
+# [weborama-tech.ru]
+||weborama-tech.ru^
+
+# [hotjar.com]
+||hotjar.com^
+
+# [hotjar.io]
+||hotjar.io^
+
+# [juicyads.com]
+||juicyads.com^
+
+# [inmobi.com]
+||inmobi.com^
+
+# [inmobicdn.net]
+||inmobicdn.net^
+
+# [whatsapp.net]
+||dit.whatsapp.net^
+
+# [visualstudio.com]
+||dc-int.services.visualstudio.com^
+||dc.services.visualstudio.com^
+
+# [facebook.com]
+||an.facebook.com^
+
+# [adcolony.com]
+||adcolony.com^
+
+# [flurry.com]
+||flurry.com^
+
+# [media.net]
+||media.net^
+
+# [pendo.io]
+||pendo.io^
+
+# [adplay.ru]
+||adplay.ru^
+
+# [adrun.ru]
+||adrun.ru^
+
+# [demdex.net]
+||demdex.net^
+
+# [omtrdc.net]
+||omtrdc.net^
+
+# [2o7.net]
+||2o7.net^
