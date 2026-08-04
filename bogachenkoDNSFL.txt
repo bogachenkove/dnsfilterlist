@@ -36,6 +36,7 @@
 # [amazon.com]
 ||aax-eu.amazon.com^
 ||unagi-na.amazon.com^
+||aan.amazon.com^
 
 # [amazon-adsystem.com]
 ||amazon-adsystem.com^
@@ -278,6 +279,7 @@
 
 # [opera.com]
 ||af.opera.com^
+||op-mobile.opera.com^
 
 # [samsungadhub.com]
 ||samsungadhub.com^
@@ -307,6 +309,12 @@
 # [adnxs.com]
 ||adnxs.com^
 
+# [adnxs.net]
+||adnxs.net^
+
+# [adnxs-simple.com]
+||adnxs-simple.com^
+
 # [appcenter.ms]
 ||appcenter.ms^
 
@@ -314,6 +322,7 @@
 ||clarity.ms^
 
 # [azure.com]
+||westus*.applicationinsights.azure.com^
 ||monitor.azure.com^
 
 # [bing.com]
@@ -496,6 +505,7 @@
 ||vak345.com^
 
 # [tiktokv.com]
+||mon.tiktokv.com^
 ||mon*-*.tiktokv.com^
 ||tnc*-*.tiktokv.com^
 
@@ -509,7 +519,7 @@
 ||toblog.tobsnssdk.com^
 
 # [tiktokpangle-b.us]
-||api*-ttp*.tiktokpangle-b.us^
+||api*-access-ttp*.tiktokpangle-b.us^
 
 # [applovin.com]
 ||applovin.com^
@@ -535,6 +545,9 @@
 ||marketing-info.wildberries.ru^
 ||personal-clusters.wildberries.ru^
 ||journal-bt.wildberries.ru^
+
+# [wb.ru]
+||a.wb.ru^
 
 # [weborama.com]
 ||weborama.com^
@@ -569,6 +582,9 @@
 
 # [facebook.com]
 ||an.facebook.com^
+
+# [fbcdn.net]
+||xy.fbcdn.net^
 
 # [adcolony.com]
 ||adcolony.com^
@@ -660,3 +676,207 @@
 
 # [umeng.com]
 ||umeng.com^
+
+# [uxfeedback.ru]
+||uxfeedback.ru^
+
+# [1rx.io]
+||1rx.io^
+
+# [3lift.com]
+||3lift.com^
+
+# [aatkit.com]
+||aatkit.com^
+
+# [abcsinsights.com]
+||abcsinsights.com^
+
+# [acobt.tech]
+||acobt.tech^
+
+# [activemetering.com]
+||activemetering.com^
+
+# [addshoppers.com]
+||addshoppers.com^
+
+# [adentifi.com]
+||adentifi.com^
+
+# [adfault.com]
+||adfault.com^
+
+# [adhub.media]
+||adhub.media^
+
+# [adjoe.zone]
+||adjoe.zone^
+
+# [adjoe.io]
+||adjoe.io^
+
+# [admantx.com]
+||admantx.com^
+
+# [adnami.io]
+||adnami.io^
+
+# [alphonso.tv]
+||alphonso.tv^
+
+# [alibaba.com]
+||tdum.alibaba.com^
+
+# [mmstat.com]
+||mmstat.com^
+
+# [taobao.com]
+||fourier.taobao.com^
+
+# [adrta.com]
+||adrta.com^
+
+# [adsafeprotected.com]
+||adsafeprotected.com^
+
+# [adsbynimbus.com]
+||adsbynimbus.com^
+
+# [adsconex.com]
+||adsconex.com^
+
+# [adsensecustomsearchads.com]
+||adsensecustomsearchads.com^
+
+# [adskeeper.com]
+||adskeeper.com^
+
+# [adskeeper.co.uk]
+||adskeeper.co.uk^
+
+# [adsniper.ru]
+||adsniper.ru^
+
+# [adsmoloco.com]
+||adsmoloco.com^
+
+# [adstk.io]
+||adstk.io^
+
+# [adswizz.com]
+||adswizz.com^
+
+# [adsximg.com]
+||adsximg.com^
+
+# [adtng.com]
+||adtng.com^
+
+# [adzerk.net]
+||adzerk.net^
+
+# [afafb.com]
+||afafb.com^
+
+# [agkn.com]
+||agkn.com^
+
+# [airbrake.io]
+||airbrake.io^
+
+# [airbridge.io]
+||airbridge.io^
+
+# [aisiteanalytics.com]
+||aisiteanalytics.com^
+
+# [apptentive.com]
+||apptentive.com^
+
+# [axon.ai]
+||axon.ai^
+
+# [casalemedia.com]
+||casalemedia.com^
+
+# [branch.io]
+||branch.io^
+
+# [gsrv.dev]
+||gsrv.dev^
+
+# [profitablecpmratenetwork.com]
+||profitablecpmratenetwork.com^
+
+# [hdacode.com]
+||hdacode.com^
+
+# [axjndvucr.com]
+||axjndvucr.com^
+
+# [yomeno.xyz]
+||yomeno.xyz^
+
+# [clannotillortale.com]
+||clannotillortale.com^
+
+# [bluetrafficstream.com]
+||bluetrafficstream.com^
+
+# [magsrv.com]
+||magsrv.com^
+
+# [twinrdengine.com]
+||twinrdengine.com^
+
+# [tsyndicate.com]
+||tsyndicate.com^
+
+# [pemsrv.com]
+||pemsrv.com^
+
+# [tjk-njk.com]
+||tjk-njk.com^
+
+# [octo25.me]
+||octo25.me^
+
+# [ebacdn.com]
+||bm.ebacdn.com^
+
+# [togothermany.com]
+||togothermany.com^
+
+# [maticooads.com]
+||maticooads.com^
+
+# [maxesads.com]
+||maxesads.com^
+
+# [admaster.cc]
+||admaster.cc^
+
+# [adsurge.com]
+||adsurge.com^
+
+# [bucoup.com]
+||bucoup.com^
+
+# [news-cdn.site]
+||news-cdn.site^
+
+# [sonicsads.com]
+||sonicsads.com^
+
+# [tradplusad.com]
+||tradplusad.com^
+
+# [dmrtb.com]
+||dmrtb.com^
+
+# [domob.cn]
+||domob.cn^
+
+# [forgeverged.com]
+||forgeverged.com^
