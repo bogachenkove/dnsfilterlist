@@ -1,0 +1,19 @@
+bogachenko's DNS Filter List
+============================
+
+A compact DNS filtering list for blocking advertising, analytics, telemetry, and tracking domains.
+
+Contents
+--------
+- "bogachenkoDNSFL.txt": filter list in DNS-blocking syntax with comments and domain rules.
+
+Usage
+-----
+1. Import "bogachenkoDNSFL.txt" into a DNS filtering tool or resolver that supports host-file/DNS-based blocklists.
+2. Use the list as a custom source in your DNS firewall, Pi-hole, AdGuard Home, or similar solution.
+3. Update by replacing the file with a newer version when available.
+
+Notes
+-----
+- The file is intended for technical users and assumes a compatible DNS filter parser.
+- Lines beginning with "!" and "#" are comments, and "||" entries are domain block rules.
