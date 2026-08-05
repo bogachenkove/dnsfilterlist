@@ -6,12 +6,14 @@
 
 # [generic ads domain rules]
 /^v(ast|paid)[_.-]/
-/^(?:.*?[_.-])?ad(?:[svx]|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?ad(?:[svx]|fs|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?adse?r(?:v(?:ices?|ers?|ing|e|r)?|s)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?rekl?(ama?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?monetiz(?:e|ation|ing|a[ts]ia)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?recommend(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?sponsor(?:s|ing)\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?preroll\d*(?:[_.-]|$)/
 
 # [generic analytics domain rules]
@@ -32,6 +34,7 @@
 /^[a-z_-]{3,15}\.[a-f0-9]{32}\.[a-z]{2,3}$/
 /^(?:.*?[_.-])?ajx?[0-9]{3,4}\.(bid|online|xyz)$/
 /^(?:.*?[_.-])?n[0-9]{2,4}adserv\.(com|xyz)$/
+/^(?:.*?[_.-])?agl0[0-9]{2}\.(bid|online|com|tech|host|pro|fun|shop|site)$/
 
 # [amazon.com]
 ||aax-eu.amazon.com^
@@ -124,6 +127,8 @@
 ||appsgrowthpromo-pa.*.google.com^
 ||peoplestackwebexperiments-pa.*.google.com^
 ||fundingchoicesmessages.google.com^
+||waa-pa.*.google.com^
+||feedback-pa.*.google.com^
 
 # [doubleclick.net]
 ||doubleclick.net^
@@ -390,6 +395,9 @@
 
 # [telecid.ru]
 ||telecid.ru^
+
+# [telecomid.ru]
+||telecomid.ru^
 
 # [mhverifier.ru]
 ||mhverifier.ru^
@@ -891,3 +899,63 @@
 
 # [exp-tas.com]
 ||default.exp-tas.com^
+
+# [onelink.me]
+||onelink.me^
+
+# [datago.ru]
+||datago.ru^
+
+# [exoclick.com]
+||exoclick.com^
+
+# [btloader.com]
+||btloader.com^
+
+# [viously.com]
+||viously.com^
+
+# [confiant-integrations.net]
+||confiant-integrations.net^
+
+# [wknd.ai]
+||wknd.ai^
+
+# [targetads.io]
+||targetads.io^
+
+# [retagro.com]
+||retagro.com^
+
+# [gpmdata.ru]
+||gpmdata.ru^
+
+# [adhigh.net]
+||adhigh.net^
+
+# [stbid.ru]
+||stbid.ru^
+
+# [rutarget.ru]
+||rutarget.ru^
+
+# [adriver.ru]
+||adriver.ru^
+
+# [otm-r.com]
+||otm-r.com^
+
+# [skcrtxr.com]
+||skcrtxr.com^
+
+# [freshmarketer.com]
+||freshmarketer.com^
+
+# [hicloud.com]
+||logbak.hicloud.com^
+
+# [luckyorange.com]
+||luckyorange.com^
+
+# [mouseflow.com]
+||mouseflow.com^
