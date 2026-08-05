@@ -182,6 +182,7 @@
 ||androidtvchannels-pa.googleapis.com^
 ||androidtvwatsonfe-pa.googleapis.com^
 ||xgapromomanager-pa.googleapis.com^
+||searchlabspartnerservice-pa.googleapis.com^
 
 # [crashlytics.com]
 ||crashlytics.com^
@@ -203,7 +204,6 @@
 
 # [yandex.ru]
 ||mc.yandex.ru^
-||yabs.yandex.ru^
 ||bs.yandex.ru^
 ||bs-meta.yandex.ru^
 ||bs-metadsp.yandex.ru^
@@ -225,11 +225,11 @@
 ||adfox.yandex.com^
 
 # [yandex.net]
-||static-mon.yandex.net^
-||offerwall.yandex.net^
-||startup.mobile.yandex.net^
 ||abt.s3.yandex.net^
+||offerwall.yandex.net^
+||static-mon.yandex.net^
 ||events.plus.yandex.net^
+||startup.mobile.yandex.net^
 
 # [yango.com]
 ||mc.yango.com^
@@ -292,16 +292,16 @@
 ||mtsopros.mts.ru^
 
 # [sberbank.ru]
+||bfds.sberbank.ru^
 ||visor.sberbank.ru^
 ||clickstream.sberbank.ru^
-||bfds.sberbank.ru^
 
 # [stmtag.ru]
 ||stmtag.ru^
 
 # [microsoft.com]
-||pipe.aria.microsoft.com^
 ||data.microsoft.com^
+||pipe.aria.microsoft.com^
 
 # [windows.com]
 ||wns.windows.com^
@@ -312,9 +312,6 @@
 # [adnxs.net]
 ||adnxs.net^
 
-# [adnxs-simple.com]
-||adnxs-simple.com^
-
 # [appcenter.ms]
 ||appcenter.ms^
 
@@ -322,12 +319,12 @@
 ||clarity.ms^
 
 # [azure.com]
-||westus*.applicationinsights.azure.com^
 ||monitor.azure.com^
+||westus*.applicationinsights.azure.com^
 
 # [bing.com]
-||bat.bing.com^
 ||c.bing.com^
+||bat.bing.com^
 
 # [spotify.com]
 ||aet.spotify.com^
@@ -521,11 +518,11 @@
 # [tiktokpangle-b.us]
 ||api*-access-ttp*.tiktokpangle-b.us^
 
-# [applovin.com]
-||applovin.com^
-
 # [applvn.com]
 ||applvn.com^
+
+# [applovin.com]
+||applovin.com^
 
 # [news-headlines.co]
 ||news-headlines.co^
@@ -577,8 +574,8 @@
 ||dit.whatsapp.net^
 
 # [visualstudio.com]
-||dc-int.services.visualstudio.com^
 ||dc.services.visualstudio.com^
+||dc-int.services.visualstudio.com^
 
 # [facebook.com]
 ||an.facebook.com^
@@ -622,13 +619,6 @@
 # [bugsnag.com]
 ||bugsnag.com^
 
-# [afafb.com]
-||afafb.com^
-
-# [easybrain.com]
-||consent.easybrain.com^
-||s3-ca-liveops.easybrain.com^
-
 # [thecatmachine.com]
 ||thecatmachine.com^
 
@@ -640,9 +630,6 @@
 
 # [inner-active.mobi]
 ||inner-active.mobi^
-
-# [inmobi.com]
-||inmobi.com^
 
 # [bidmachine.io]
 ||bidmachine.io^
@@ -667,9 +654,6 @@
 
 # [braze.com]
 ||braze.com^
-
-# [clevertap-prod.com]
-||clevertap-prod.com^
 
 # [fineboost.com]
 ||fineboost.com^
@@ -697,9 +681,6 @@
 
 # [activemetering.com]
 ||activemetering.com^
-
-# [addshoppers.com]
-||addshoppers.com^
 
 # [adentifi.com]
 ||adentifi.com^
@@ -785,9 +766,6 @@
 # [airbrake.io]
 ||airbrake.io^
 
-# [airbridge.io]
-||airbridge.io^
-
 # [aisiteanalytics.com]
 ||aisiteanalytics.com^
 
@@ -802,9 +780,6 @@
 
 # [branch.io]
 ||branch.io^
-
-# [gsrv.dev]
-||gsrv.dev^
 
 # [profitablecpmratenetwork.com]
 ||profitablecpmratenetwork.com^
@@ -878,5 +853,41 @@
 # [domob.cn]
 ||domob.cn^
 
-# [forgeverged.com]
-||forgeverged.com^
+# [geoedge.be]
+||geoedge.be^
+
+# [voodoo.io]
+||voodoo.io^
+
+# [voodoo-tech.io]
+||voodoo-tech.io^
+
+# [vtwenty.com]
+||vtwenty.com^
+
+# [vungle.com]
+||vungle.com^
+
+# [vupulse.com]
+||vupulse.com^
+
+# [waust.at]
+||waust.at^
+
+# [wetracked.io]
+||wetracked.io^
+
+# [wortise.com]
+||wortise.com^
+
+# [atdmt.com]
+||atdmt.com^
+
+# [perfdrive.com]
+||perfdrive.com^
+
+# [adjug.com]
+||adjug.com^
+
+# [exp-tas.com]
+||default.exp-tas.com^
