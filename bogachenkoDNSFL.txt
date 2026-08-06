@@ -21,7 +21,7 @@
 /^(?:.*?[_.-])?analyt(?:ic[as]?|ical)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?count(ers?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?telemetr(?:y|ia|ic[as]?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/$denyallow=track24.ru
 /^(?:.*?[_.-])?sentry\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?log(?:[syx]|g(?:ers?|ing))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?logser(?:v(?:ices?|ers?|ing|e)?|s)?\d*(?:[_.-]|$)/
@@ -110,6 +110,7 @@
 ||b2.mail.ru^
 ||an.mail.ru^
 ||mediascope.mail.ru^
+||media-stat.mail.ru^
 
 # [google.com]
 ||ogads-pa.*.google.com^
@@ -224,6 +225,7 @@
 ||amc.yandex.ru^
 ||uaas.yandex.ru^
 ||statchecker.yandex.ru^
+||autofill.yandex.ru^
 
 # [yandex.com]
 ||mc.yandex.com^
@@ -236,6 +238,7 @@
 ||static-mon.yandex.net^
 ||events.plus.yandex.net^
 ||startup.mobile.yandex.net^
+||browser-updater.yandex.net^
 
 # [yango.com]
 ||mc.yango.com^
@@ -828,6 +831,7 @@
 
 # [ebacdn.com]
 ||bm.ebacdn.com^
+||as.ebacdn.com^
 
 # [togothermany.com]
 ||togothermany.com^
@@ -1026,3 +1030,156 @@
 
 # [viadata.store]
 ||viadata.store^
+
+# [cosedcost.com]
+||cosedcost.com^
+
+# [caulireid.com]
+||caulireid.com^
+
+# [5gvci.com]
+||5gvci.com^
+
+# [usrpubtrk.com]
+||usrpubtrk.com^
+
+# [dolesdao.com]
+||dolesdao.com^
+
+# [effectivegatecpm.com]
+||effectivegatecpm.com^
+
+# [acscdn.com]
+||acscdn.com^
+
+# [unfrizzpacinko.com]
+||unfrizzpacinko.com^
+
+# [bvtpk.com]
+||bvtpk.com^
+
+# [profitableratecpm.com]
+||profitableratecpm.com^
+
+# [jyzkut.com]
+||jyzkut.com^
+
+# [histats.com]
+||histats.com^
+
+# [llvpn.com]
+||llvpn.com^
+
+# [ptinusmufasal.com]
+||ptinusmufasal.com^
+
+# [tagivi.com]
+||tagivi.com^
+
+# [adexchangerapid.com]
+||adexchangerapid.com^
+
+# [dmtgvn.com]
+||dmtgvn.com^
+
+# [adsafee.io]
+||adsafee.io^
+
+# [calltouch.ru]
+||calltouch.ru^
+
+# [go-mpulse.net]
+||go-mpulse.net^
+
+# [abtasty.com]
+||abtasty.com^
+
+# [tagcommander.com]
+||tagcommander.com^
+
+# [fastly-insights.com]
+||fastly-insights.com^
+
+# [quantserve.com]
+||quantserve.com^
+
+# [cloudflareinsights.com]
+||cloudflareinsights.com^
+
+# [dotmetrics.net]
+||dotmetrics.net^
+
+# [adlightning.com]
+||adlightning.com^
+
+# [queachycorer.com]
+||queachycorer.com^
+
+# [adgear.com]
+||adgear.com^
+
+# [adgrx.com]
+||adgrx.com^
+
+# [adhitzads.com]
+||adhitzads.com^
+
+# [adhood.com]
+||adhood.com^
+
+# [liftoff.io^]
+||liftoff.io^
+
+# [moloco.com]
+||moloco.com^
+
+# [firwinds.site]
+||firwinds.site^
+
+# [advmusic.com]
+||advmusic.com^
+
+# [advertronic.io]
+||advertronic.io^
+
+# [pushwoosh.com]
+||pushwoosh.com^
+
+# [adport.net]
+||adport.net^
+
+# [21wiz.com]
+||21wiz.com^
+
+# [veselchaga.link]
+||veselchaga.link^
+
+# [atddmn.com]
+||atddmn.com^
+
+# [servetraff.com]
+||servetraff.com^
+
+# [bidster.net]
+||bidster.net^
+
+# [adpod.in]
+||adpod.in^
+
+# [openfpcdn.io]
+||openfpcdn.io^
+
+# [fh-wgt.com]
+||fh-wgt.com^
+
+# [wheelroot.com]
+||wheelroot.com^
+
+# [rugfrfji.win]
+||rugfrfji.win^
+
+# [github.com]
+||collector.github.com^
+
+# [rojknob.win]
+||rojknob.win^
