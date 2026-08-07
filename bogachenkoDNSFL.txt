@@ -28,6 +28,7 @@
 /^(?:.*?[_.-])?metr(?:i[ck][sa]?|ical)?\d*(?:[_.-]|$)/$denyallow=metric.gstatic.com
 /^(?:.*?[_.-])?[a-z]{1,3}metric[as][_.-]/
 /^(?:.*?[_.-])?diagnos(?:is|ti[ck][sa]?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?stat(?:isti[ck]a|s)?\d*(?:[_.-]|$)/
 
 # [generic trash domain rules]
 /^a\.[a-f0-9]{30,60}\.com$/
@@ -41,6 +42,7 @@
 ||aax-eu.amazon.com^
 ||unagi-na.amazon.com^
 ||aan.amazon.com^
+||fls-na.amazon.com^
 
 # [amazon-adsystem.com]
 ||amazon-adsystem.com^
@@ -54,9 +56,6 @@
 # [twitch.tv]
 ||spade.twitch.tv^
 
-# [live-video.net]
-||stats.live-video.net^
-
 # [serving-sys.com]
 ||serving-sys.com^
 
@@ -67,6 +66,7 @@
 ||d1zhmd1pxxxajf.cloudfront.net^
 ||dcbbwymp1bhlf.cloudfront.net^
 ||d9r4lqt28t1fm.cloudfront.net^
+||d2gt2ux04o03l1.cloudfront.net^
 
 # [vk.com]
 ||ms.vk.com^
@@ -110,14 +110,12 @@
 ||b2.mail.ru^
 ||an.mail.ru^
 ||mediascope.mail.ru^
-||media-stat.mail.ru^
 
 # [google.com]
 ||ogads-pa.*.google.com^
 ||www-googleadservices.l.google.com^
 ||www-googletagmanager.l.google.com^
 ||www-googletagservices.l.google.com^
-||video-stats.l.google.com^
 ||static-doubleclick-net.l.google.com^
 ||s*-2mdn-net.l.google.com^
 ||partnerad.l.google.com^
@@ -276,7 +274,6 @@
 
 # [avito.ru]
 ||rt.avito.ru^
-||stats.avito.ru^
 
 # [xiaomi.com]
 ||mistat.xiaomi.com^
@@ -1183,3 +1180,51 @@
 
 # [rojknob.win]
 ||rojknob.win^
+
+# [phgop1.com]
+||phgop1.com^
+
+# [vstserv.com]
+||vstserv.com^
+
+# [tapioni.com]
+||tapioni.com^
+
+# [nereserv.com]
+||nereserv.com^
+
+# [metricswpsh.com]
+||metricswpsh.com^
+
+# [cdn-fc.com]
+||cdn-fc.com^
+
+# [mrdmca.com]
+||mrdmca.com^
+
+# [flepquix.com]
+||flepquix.com^
+
+# [poloptrex.com]
+||poloptrex.com^
+
+# [drimquop.com]
+||drimquop.com^
+
+# [maginp.com]
+||maginp.com^
+
+# [clammyendearedkeg.com]
+||clammyendearedkeg.com^
+
+# [gsrv.dev]
+||gsrv.dev^
+
+# [egotisticexcavateplywood.com]
+||egotisticexcavateplywood.com^
+
+# [epidemicshimmysmuggling.com]
+||epidemicshimmysmuggling.com^
+
+# [endlesshandbaglinked.com]
+||endlesshandbaglinked.com^
