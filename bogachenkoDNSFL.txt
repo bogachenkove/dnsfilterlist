@@ -207,6 +207,9 @@
 # [mediation.goog]
 ||mediation.goog^
 
+# [admetrica.ru]
+||admetrica.ru^
+
 # [yandex.ru]
 ||mc.yandex.ru^
 ||bs.yandex.ru^
@@ -223,11 +226,97 @@
 ||amc.yandex.ru^
 ||uaas.yandex.ru^
 ||statchecker.yandex.ru^
-||autofill.yandex.ru^
+
+# [yandex.md]
+||awaps.yandex.md^
+||yabs.yandex.md^
+||mc.yandex.md^
+||an.yandex.md^
+
+# [yandex.by]
+||statchecker.yandex.by^
+||uaas.yandex.by^
+||amc.yandex.by^
+||awaps.yandex.by^
+||adsdk.yandex.by^
+||market-baobab.yandex.by^
+||adfstat.yandex.by^
+||adfox.yandex.by^
+||yabs.yandex.by^
+||an.yandex.by^
+||mc.yandex.by^
+||mads.yandex.by^
+||bs.yandex.by^
+||bs-meta.yandex.by^
+||bs-metadsp.yandex.by^
+
+# [yandex.kg]
+||awaps.yandex.kg^
+||an.yandex.kg^
+||yabs.yandex.kg^
+||mc.yandex.kg^
+
+# [yandex.kz]
+||statchecker.yandex.kz^
+||uaas.yandex.kz^
+||amc.yandex.kz^
+||awaps.yandex.kz^
+||mads.yandex.kz^
+||adsdk.yandex.kz^
+||market-baobab.yandex.kz^
+||adfstat.yandex.kz^
+||an.yandex.kz^
+||yabs.yandex.kz^
+||mc.yandex.kz^
+||bs.yandex.kz^
+||bs-meta.yandex.kz^
+||bs-metadsp.yandex.kz^
+||adfox.yandex.kz^
+
+# [yandex.tj]
+||awaps.yandex.tj^
+||an.yandex.tj^
+||yabs.yandex.tj^
+||mc.yandex.tj^
+
+# [yandex.com.tr]
+||uaas.yandex.com.tr^
+||amc.yandex.com.tr^
+||awaps.yandex.com.tr^
+||mads.yandex.com.tr^
+||adsdk.yandex.com.tr^
+||market-baobab.yandex.com.tr^
+||adfstat.yandex.com.tr^
+||an.yandex.com.tr^
+||yabs.yandex.com.tr^
+||mc.yandex.com.tr^
+||bs.yandex.com.tr^
+||bs-meta.yandex.com.tr^
+||bs-metadsp.yandex.com.tr^
+||adfox.yandex.com.tr^
+||statchecker.yandex.com.tr^
+
+# [yandex.uz]
+||awaps.yandex.uz^
+||an.yandex.uz^
+||yabs.yandex.uz^
+||mc.yandex.uz^
 
 # [yandex.com]
+||statchecker.yandex.com^
+||uaas.yandex.com^
+||amc.yandex.com^
+||awaps.yandex.com^
+||mads.yandex.com^
+||adsdk.yandex.com^
+||market-baobab.yandex.com^
+||adfstat.yandex.com^
+||an.yandex.com^
 ||mc.yandex.com^
 ||bs.yandex.com^
+||bs-meta.yandex.com^
+||bs-metadsp.yandex.com^
+||yabs.yandex.com^
 ||adfox.yandex.com^
 
 # [yandex.net]
@@ -342,6 +431,7 @@
 ||scorecardresearch.com^
 
 # [msn.com]
+||g.msn.com^
 ||c.msn.com^
 ||srtb.msn.com^
 ||browser.events.data.msn.com^
