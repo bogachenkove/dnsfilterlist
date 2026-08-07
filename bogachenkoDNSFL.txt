@@ -12,7 +12,7 @@
 /^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?monetiz(?:e|ation|ing|a[ts]ia)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?recommend(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?recomm?end(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?sponsor(?:s|ing)\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?preroll\d*(?:[_.-]|$)/
 
@@ -320,6 +320,7 @@
 ||adfox.yandex.com^
 
 # [yandex.net]
+||csp.yandex.net^
 ||abt.s3.yandex.net^
 ||offerwall.yandex.net^
 ||static-mon.yandex.net^
@@ -1318,3 +1319,6 @@
 
 # [endlesshandbaglinked.com]
 ||endlesshandbaglinked.com^
+
+# [firefox.com]
+||pa.firefox.com^
