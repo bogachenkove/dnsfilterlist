@@ -1322,3 +1322,12 @@
 
 # [firefox.com]
 ||pa.firefox.com^
+
+# [facct.ru]
+||facct.ru^
+
+# [indoleads.com]
+||indoleads.com^
+
+# [aliyun.com]
+||acjs.aliyun.com^
