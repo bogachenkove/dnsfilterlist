@@ -1331,3 +1331,45 @@
 
 # [aliyun.com]
 ||acjs.aliyun.com^
+
+# [octotracking.com]
+||octotracking.com^
+
+# [liftoff-creatives.io]
+||liftoff-creatives.io^
+
+# [startappservice.com]
+||startappservice.com^
+
+# [21wiz.com]
+||21wiz.com^
+
+# [pomyaniubogogo.link]
+||pomyaniubogogo.link^
+
+# [rstprgapipt.com]
+||rstprgapipt.com^
+
+# [vertiguzha.link]
+||vertiguzha.link^
+
+# [pepyakanew.link]
+||pepyakanew.link^
+
+# [tettacrown.com]
+||tettacrown.com^
+
+# [zog.link]
+||zog.link^
+
+# [mobtop.com]
+||mobtop.com^
+
+# [iloptrex.com]
+||iloptrex.com^
+
+# [culturaltracking.ru]
+||culturaltracking.ru^
+
+# [pinterest.com]
+||ct.pinterest.com^
