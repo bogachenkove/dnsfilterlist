@@ -35,7 +35,7 @@
 /^[a-z_-]{3,15}\.[a-f0-9]{32}\.[a-z]{2,3}$/
 /^(?:.*?[_.-])?ajx?[0-9]{3,4}\.(bid|online|xyz)$/
 /^(?:.*?[_.-])?n[0-9]{2,4}adserv\.(com|xyz)$/
-/^(?:.*?[_.-])?agl0[0-9]{2}\.(bid|online|com|tech|host|pro|fun|shop|site)$/
+/^(?:.*?[_.-])?agl0[0-9]{2}\.(bid|online|com|tech|host|pro|fun|shop|site|art)$/
 /^(?:.*?[_.-])?srvd?[0-9]{3,4}\.com$/
 
 # [amazon.com]
@@ -1341,9 +1341,6 @@
 # [startappservice.com]
 ||startappservice.com^
 
-# [21wiz.com]
-||21wiz.com^
-
 # [pomyaniubogogo.link]
 ||pomyaniubogogo.link^
 
@@ -1373,3 +1370,6 @@
 
 # [pinterest.com]
 ||ct.pinterest.com^
+
+# [github.io]
+||weblion777.github.io^
