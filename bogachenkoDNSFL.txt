@@ -5,770 +5,56 @@
 ! License: https://raw.githubusercontent.com/bogachenkove/dnsfilterlist/master/LICENSE
 
 # [generic ads domain rules]
-/^v(ast|paid)[_.-]/
 /^(?:.*?[_.-])?ad(?:[svx]|fs|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?adse?r(?:v(?:ices?|ers?|ing|e|r)?|s)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?rekl?(ama?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?monetiz(?:e|ation|ing|a[ts]ia)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?recomm?end(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?sponsor(?:s|ing)\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?preroll\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?recomm?end(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?rekl?(ama?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?sponsor(?:s|ing)\d*(?:[_.-]|$)/
+/^v(ast|paid)[_.-]/
 
 # [generic analytics domain rules]
-/^pi?x(el)?\d*[_.-]/$denyallow=phncdn.com
+/^(?:.*?[_.-])?[a-z]{1,3}metric[as][_.-]/
 /^(?:.*?[_.-])?analyt(?:ic[as]?|ical)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?count(ers?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?telemetr(?:y|ia|ic[as]?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/$denyallow=track24.ru
-/^(?:.*?[_.-])?sentry\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?diagnos(?:is|ti[ck][sa]?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?log(?:[syx]|g(?:ers?|ing))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?logser(?:v(?:ices?|ers?|ing|e)?|s)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?metr(?:i[ck][sa]?|ical)?\d*(?:[_.-]|$)/$denyallow=metric.gstatic.com
-/^(?:.*?[_.-])?[a-z]{1,3}metric[as][_.-]/
-/^(?:.*?[_.-])?diagnos(?:is|ti[ck][sa]?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?sentry\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?stat(?:isti[ck]a|s)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?telemetr(?:y|ia|ic[as]?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/$denyallow=track24.ru
+/^pi?x(el)?\d*[_.-]/$denyallow=phncdn.com
 
 # [generic trash domain rules]
-/^a\.[a-f0-9]{30,60}\.com$/
-/^[a-z_-]{3,15}\.[a-f0-9]{32}\.[a-z]{2,3}$/
+/^(?:.*?[_.-])?agl0[0-9]{2}\.(bid|online|com|tech|host|pro|fun|shop|site|art)$/
 /^(?:.*?[_.-])?ajx?[0-9]{3,4}\.(bid|online|xyz)$/
 /^(?:.*?[_.-])?n[0-9]{2,4}adserv\.(com|xyz)$/
-/^(?:.*?[_.-])?agl0[0-9]{2}\.(bid|online|com|tech|host|pro|fun|shop|site|art)$/
 /^(?:.*?[_.-])?srvd?[0-9]{3,4}\.com$/
-
-# [amazon.com]
-||aax-eu.amazon.com^
-||unagi-na.amazon.com^
-||aan.amazon.com^
-||fls-na.amazon.com^
-
-# [amazon-adsystem.com]
-||amazon-adsystem.com^
-
-# [amazonaws.com]
-||adtago.s3.amazonaws.com^
-||affiliationjs.s3.amazonaws.com^
-||adtechvideo.s3.amazonaws.com^
-||analyticsengine.s3.amazonaws.com^
-
-# [twitch.tv]
-||spade.twitch.tv^
-
-# [serving-sys.com]
-||serving-sys.com^
-
-# [serving-sys.ru]
-||serving-sys.ru^
-
-# [cloudfront.net]
-||d1zhmd1pxxxajf.cloudfront.net^
-||dcbbwymp1bhlf.cloudfront.net^
-||d9r4lqt28t1fm.cloudfront.net^
-||d2gt2ux04o03l1.cloudfront.net^
-
-# [vk.com]
-||ms.vk.com^
-
-# [vk.ru]
-||ms.vk.ru^
-
-# [ok.ru]
-||ms.ok.ru^
-
-# [dzen.ru]
-||ms.dzen.ru^
-
-# [vk-portal.net]
-||vk-portal.net^
-
-# [apptracer.ru]
-||apptracer.ru^
-
-# [trace-flow.ru]
-||trace-flow.ru^
-
-# [mradx.net]
-||mradx.net^
-
-# [imgsmail.ru]
-||radar.imgsmail.ru^
-||media-advcycle.imgsmail.ru^
-
-# [mail.ru]
-||top-fwz1.mail.ru^
-||r3.mail.ru^
-||rs.mail.ru^
-||r.mail.ru^
-||t.mail.ru^
-||r0.mail.ru^
-||r1.mail.ru^
-||trk.mail.ru^
-||xray.mail.ru^
-||pulse.mail.ru^
-||b2.mail.ru^
-||an.mail.ru^
-||mediascope.mail.ru^
-
-# [google.com]
-||ogads-pa.*.google.com^
-||www-googleadservices.l.google.com^
-||www-googletagmanager.l.google.com^
-||www-googletagservices.l.google.com^
-||static-doubleclick-net.l.google.com^
-||s*-2mdn-net.l.google.com^
-||partnerad.l.google.com^
-||pagead-googlehosted.l.google.com^
-||pagead-tpc.l.google.com^
-||pagead.l.google.com^
-||googleadapis.l.google.com^
-||id.l.google.com^
-||appsgrowthpromo-pa.*.google.com^
-||peoplestackwebexperiments-pa.*.google.com^
-||fundingchoicesmessages.google.com^
-||waa-pa.*.google.com^
-||feedback-pa.*.google.com^
-
-# [doubleclick.net]
-||doubleclick.net^
-
-# [doubleclick-cn.net]
-||doubleclick-cn.net^
-
-# [doubleclick.cn]
-||doubleclick.cn^
-
-# [admob.com]
-||admob.com^
-
-# [2mdn.net]
-||2mdn.net^
-
-# [app-measurement.com]
-||app-measurement.com^
-
-# [app-measurement-cn.com]
-||app-measurement-cn.com^
-
-# [googlesyndication.com]
-||googlesyndication.com^
-
-# [googlesyndication-cn.com]
-||googlesyndication-cn.com^
-
-# [googleadservices.com]
-||googleadservices.com^
-
-# [googleanalytics.com]
-||googleanalytics.com^
-
-# [googleadservices-cn.com]
-||googleadservices-cn.com^
-
-# [googletagmanager.com]
-||googletagmanager.com^
-
-# [googletagmanager-cn.com]
-||googletagmanager-cn.com^
-
-# [googletagservices.com]
-||googletagservices.com^
-
-# [googletagservices-cn.com]
-||googletagservices-cn.com^
-
-# [googleapis.com]
-||ogads-pa.googleapis.com^
-||firebaselogging.googleapis.com^
-||crashlyticsreports-pa.googleapis.com^
-||imasdk.googleapis.com^
-||firebaselogging-pa.googleapis.com^
-||androidtvchannels-pa.googleapis.com^
-||androidtvwatsonfe-pa.googleapis.com^
-||xgapromomanager-pa.googleapis.com^
-||searchlabspartnerservice-pa.googleapis.com^
-
-# [crashlytics.com]
-||crashlytics.com^
-
-# [googlevads-cn.com]
-||googlevads-cn.com^
-
-# [googletraveladservices-cn.com]
-||googletraveladservices-cn.com^
-
-# [adtrafficquality.google]
-||adtrafficquality.google^
-
-# [youtube.com]
-||s.youtube.com^
-
-# [mediation.goog]
-||mediation.goog^
-
-# [admetrica.ru]
-||admetrica.ru^
-
-# [yandex.ru]
-||mc.yandex.ru^
-||bs.yandex.ru^
-||bs-meta.yandex.ru^
-||bs-metadsp.yandex.ru^
-||an.yandex.ru^
-||yabs.yandex.ru^
-||adfstat.yandex.ru^
-||market-baobab.yandex.ru^
-||adsdk.yandex.ru^
-||adfox.yandex.ru^
-||mads.yandex.ru^
-||awaps.yandex.ru^
-||amc.yandex.ru^
-||uaas.yandex.ru^
-||statchecker.yandex.ru^
-
-# [yandex.md]
-||awaps.yandex.md^
-||yabs.yandex.md^
-||mc.yandex.md^
-||an.yandex.md^
-
-# [yandex.by]
-||statchecker.yandex.by^
-||uaas.yandex.by^
-||amc.yandex.by^
-||awaps.yandex.by^
-||adsdk.yandex.by^
-||market-baobab.yandex.by^
-||adfstat.yandex.by^
-||adfox.yandex.by^
-||yabs.yandex.by^
-||an.yandex.by^
-||mc.yandex.by^
-||mads.yandex.by^
-||bs.yandex.by^
-||bs-meta.yandex.by^
-||bs-metadsp.yandex.by^
-
-# [yandex.kg]
-||awaps.yandex.kg^
-||an.yandex.kg^
-||yabs.yandex.kg^
-||mc.yandex.kg^
-
-# [yandex.kz]
-||statchecker.yandex.kz^
-||uaas.yandex.kz^
-||amc.yandex.kz^
-||awaps.yandex.kz^
-||mads.yandex.kz^
-||adsdk.yandex.kz^
-||market-baobab.yandex.kz^
-||adfstat.yandex.kz^
-||an.yandex.kz^
-||yabs.yandex.kz^
-||mc.yandex.kz^
-||bs.yandex.kz^
-||bs-meta.yandex.kz^
-||bs-metadsp.yandex.kz^
-||adfox.yandex.kz^
-
-# [yandex.tj]
-||awaps.yandex.tj^
-||an.yandex.tj^
-||yabs.yandex.tj^
-||mc.yandex.tj^
-
-# [yandex.com.tr]
-||uaas.yandex.com.tr^
-||amc.yandex.com.tr^
-||awaps.yandex.com.tr^
-||mads.yandex.com.tr^
-||adsdk.yandex.com.tr^
-||market-baobab.yandex.com.tr^
-||adfstat.yandex.com.tr^
-||an.yandex.com.tr^
-||yabs.yandex.com.tr^
-||mc.yandex.com.tr^
-||bs.yandex.com.tr^
-||bs-meta.yandex.com.tr^
-||bs-metadsp.yandex.com.tr^
-||adfox.yandex.com.tr^
-||statchecker.yandex.com.tr^
-
-# [yandex.uz]
-||awaps.yandex.uz^
-||an.yandex.uz^
-||yabs.yandex.uz^
-||mc.yandex.uz^
-
-# [yandex.com]
-||statchecker.yandex.com^
-||uaas.yandex.com^
-||amc.yandex.com^
-||awaps.yandex.com^
-||mads.yandex.com^
-||adsdk.yandex.com^
-||market-baobab.yandex.com^
-||adfstat.yandex.com^
-||an.yandex.com^
-||mc.yandex.com^
-||bs.yandex.com^
-||bs-meta.yandex.com^
-||bs-metadsp.yandex.com^
-||yabs.yandex.com^
-||adfox.yandex.com^
-
-# [yandex.net]
-||csp.yandex.net^
-||abt.s3.yandex.net^
-||offerwall.yandex.net^
-||static-mon.yandex.net^
-||events.plus.yandex.net^
-||startup.mobile.yandex.net^
-||browser-updater.yandex.net^
-
-# [yango.com]
-||mc.yango.com^
-
-# [webvisor.org]
-||webvisor.org^
-
-# [webvisor.com]
-||webvisor.com^
-
-# [adfox.ru]
-||adfox.ru^
-
-# [adwolf.ru]
-||adwolf.ru^
-
-# [yandex-net.ru]
-||startup-mobile.ap.yandex-net.ru^
-
-# [yadro.ru]
-||yadro.ru^
-
-# [apple.com]
-||iad.apple.com^
-||iadsdk.apple.com^
-
-# [sentry.io]
-||sentry.io^
-
-# [sentry-cdn.com]
-||sentry-cdn.com^
-
-# [getsentry.com]
-||getsentry.com^
-
-# [avito.ru]
-||rt.avito.ru^
-
-# [xiaomi.com]
-||mistat.xiaomi.com^
-||mistat.*.xiaomi.com^
-
-# [miui.com]
-||sec.miui.com^
-||sec.*.miui.com^
-
-# [opera.com]
-||af.opera.com^
-||op-mobile.opera.com^
-
-# [samsungadhub.com]
-||samsungadhub.com^
-
-# [samsungads.com]
-||samsungads.com^
-
-# [mts.ru]
-||a.mts.ru^
-||mtsopros.mts.ru^
-
-# [sberbank.ru]
-||bfds.sberbank.ru^
-||visor.sberbank.ru^
-||clickstream.sberbank.ru^
-
-# [stmtag.ru]
-||stmtag.ru^
-
-# [microsoft.com]
-||data.microsoft.com^
-||pipe.aria.microsoft.com^
-
-# [windows.com]
-||wns.windows.com^
-
-# [adnxs.com]
-||adnxs.com^
-
-# [adnxs.net]
-||adnxs.net^
-
-# [appcenter.ms]
-||appcenter.ms^
-
-# [clarity.ms]
-||clarity.ms^
-
-# [azure.com]
-||monitor.azure.com^
-||westus*.applicationinsights.azure.com^
-
-# [bing.com]
-||c.bing.com^
-||bat.bing.com^
-
-# [spotify.com]
-||aet.spotify.com^
-
-# [scdn.co]
-||adstudio-assets.scdn.co^
-
-# [scorecardresearch.com]
-||scorecardresearch.com^
-
-# [msn.com]
-||g.msn.com^
-||c.msn.com^
-||srtb.msn.com^
-||browser.events.data.msn.com^
-
-# [trafficjunky.com]
-||trafficjunky.com^
-
-# [trafficjunky.net]
-||trafficjunky.net^
-
-# [etahub.com]
-||etahub.com^
-
-# [nelreports.net]
-||nelreports.net^
-
-# [adform.net]
-||adform.net^
-
-# [adform.com]
-||adform.com^
-
-# [admedia.com]
-||admedia.com^
-
-# [adsterra.com]
-||adsterra.com^
-
-# [amplitude.com]
-||amplitude.com^
-
-# [applift.com]
-||applift.com^
-
-# [mopub.com]
-||mopub.com^
-
-# [appnext.com]
-||appnext.com^
-
-# [appodeal.com]
-||appodeal.com^
-
-# [hlx.page]
-||rum.hlx.page^
-
-# [clicktale.net]
-||clicktale.net^
-
-# [impactradius-event.com]
-||impactradius-event.com^
-
-# [telecid.ru]
-||telecid.ru^
-
-# [telecomid.ru]
-||telecomid.ru^
-
-# [mhverifier.ru]
-||mhverifier.ru^
-
-# [cmediahub.ru]
-||cmediahub.ru^
-
-# [digitaltarget.ru]
-||digitaltarget.ru^
-
-# [rambler.ru]
-||ssp.rambler.ru^
-
-# [top100.ru]
-||top100.ru^
-
-# [adjust.com]
-||adjust.com^
-
-# [adjust.net.in]
-||adjust.net.in^
-
-# [adjust.io]
-||adjust.io^
-
-# [adjust.world]
-||adjust.world^
-
-# [adj.st]
-||adj.st^
-
-# [traffaret.com]
-||traffaret.com^
-
-# [bidderstack.com]
-||bidderstack.com^
-
-# [bumlam.com]
-||bumlam.com^
-
-# [punchmedia.ru]
-||punchmedia.ru^
-
-# [betweendigital.com]
-||betweendigital.com^
-
-# [getads.ru]
-||getads.ru^
-
-# [bridgertb.tech]
-||bridgertb.tech^
-
-# [my.com]
-||my.com^
-
-# [buzzoola.com]
-||buzzoola.com^
-
-# [artfut.com]
-||artfut.com^
-
-# [aprtx.com]
-||aprtx.com^
-
-# [dspgate.ru]
-||dspgate.ru^
-
-# [bonuscake.ru]
-||bonuscake.ru^
-
-# [mb9pzp.ru]
-||mb9pzp.ru^
-
-# [mindbox.ru]
-||mindbox.ru^
-
-# [tapjoy.com]
-||tapjoy.com^
-
-# [tapjoyads.com]
-||tapjoyads.com^
-
-# [unity3d.com]
-||iads.unity3d.com^
-||unityads.unity3d.com^
-||uca.cloud.unity3d.com^
-||cdp.cloud.unity3d.com^
-||mediation.unity3d.com^
-||config.uca.cloud.unity3d.com^
-
-# [statad.ru]
-||statad.ru^
-
-# [unhappyweakness.com]
-||unhappyweakness.com^
-
-# [acdcdn.com]
-||acdcdn.com^
-
-# [appsflyer.com]
-||appsflyer.com^
-
-# [appsflyersdk.com]
-||appsflyersdk.com^
-
-# [deltarockme.com]
-||deltarockme.com^
-
-# [vak345.com]
-||vak345.com^
-
-# [tiktokv.com]
-||mon.tiktokv.com^
-||mon*-*.tiktokv.com^
-||tnc*-*.tiktokv.com^
-
-# [tiktokpangle.us]
-||tiktokpangle.us^
-
-# [tiktokpangle-cdn-us.com]
-||lf-static.tiktokpangle-cdn-us.com^
-
-# [tobsnssdk.com]
-||toblog.tobsnssdk.com^
-
-# [tiktokpangle-b.us]
-||api*-access-ttp*.tiktokpangle-b.us^
-
-# [applvn.com]
-||applvn.com^
-
-# [applovin.com]
-||applovin.com^
-
-# [news-headlines.co]
-||news-headlines.co^
-
-# [rutube.ru]
-||a.rutube.ru^
-||ac.rutube.ru^
-||goya.rutube.ru^
-
-# [sorrybizzy.xyz]
-||sorrybizzy.xyz^
-
-# [zanapredoaxent.xyz]
-||zanapredoaxent.xyz^
-
-# [wildberries.ru]
-||marketing-info.wildberries.ru^
-||personal-clusters.wildberries.ru^
-||journal-bt.wildberries.ru^
-
-# [wb.ru]
-||a.wb.ru^
-
-# [weborama.com]
-||weborama.com^
-
-# [weborama.fr]
-||weborama.fr^
-
-# [weborama-tech.ru]
-||weborama-tech.ru^
-
-# [hotjar.com]
-||hotjar.com^
-
-# [hotjar.io]
-||hotjar.io^
-
-# [juicyads.com]
-||juicyads.com^
-
-# [inmobi.com]
-||inmobi.com^
-
-# [inmobicdn.net]
-||inmobicdn.net^
-
-# [whatsapp.net]
-||dit.whatsapp.net^
-
-# [visualstudio.com]
-||dc.services.visualstudio.com^
-||dc-int.services.visualstudio.com^
-
-# [facebook.com]
-||an.facebook.com^
-
-# [fbcdn.net]
-||xy.fbcdn.net^
-
-# [adcolony.com]
-||adcolony.com^
-
-# [flurry.com]
-||flurry.com^
-
-# [media.net]
-||media.net^
-
-# [pendo.io]
-||pendo.io^
-
-# [adplay.ru]
-||adplay.ru^
-
-# [adrun.ru]
-||adrun.ru^
-
-# [demdex.net]
-||demdex.net^
-
-# [omtrdc.net]
-||omtrdc.net^
-
-# [2o7.net]
-||2o7.net^
-
-# [gameanalytics.com]
-||gameanalytics.com^
-
-# [backtrace.io]
-||backtrace.io^
-
-# [bugsnag.com]
-||bugsnag.com^
-
-# [thecatmachine.com]
-||thecatmachine.com^
-
-# [everestop.io]
-||everestop.io^
-
-# [blueduckredapple.com]
-||blueduckredapple.com^
-
-# [inner-active.mobi]
-||inner-active.mobi^
-
-# [bidmachine.io]
-||bidmachine.io^
-
-# [aditude.io]
-||aditude.io^
-
-# [prebid-server.com]
-||prebid-server.com^
-
-# [confiant-integrations.net]
-||confiant-integrations.net^
-
-# [singular.net]
-||singular.net^
-
-# [x3m.biz]
-||x3m.biz^
-
-# [x3mads.com]
-||x3mads.com^
-
-# [braze.com]
-||braze.com^
-
-# [fineboost.com]
-||fineboost.com^
-
-# [umeng.com]
-||umeng.com^
-
-# [uxfeedback.ru]
-||uxfeedback.ru^
+/^[a-z_-]{3,15}\.[a-f0-9]{32}\.[a-z]{2,3}$/
+/^a\.[a-f0-9]{30,60}\.com$/
 
 # [1rx.io]
 ||1rx.io^
 
+# [21wiz.com]
+||21wiz.com^
+
+# [2mdn.net]
+||2mdn.net^
+
+# [2o7.net]
+||2o7.net^
+
 # [3lift.com]
 ||3lift.com^
+
+# [5gvci.com]
+||5gvci.com^
 
 # [aatkit.com]
 ||aatkit.com^
@@ -776,47 +62,149 @@
 # [abcsinsights.com]
 ||abcsinsights.com^
 
+# [abtasty.com]
+||abtasty.com^
+
+# [acdcdn.com]
+||acdcdn.com^
+
 # [acobt.tech]
 ||acobt.tech^
+
+# [acscdn.com]
+||acscdn.com^
 
 # [activemetering.com]
 ||activemetering.com^
 
+# [adcamp.ru]
+||adcamp.ru^
+
+# [adcash.com]
+||adcash.com^
+
+# [adcolony.com]
+||adcolony.com^
+
 # [adentifi.com]
 ||adentifi.com^
+
+# [adexchangerapid.com]
+||adexchangerapid.com^
 
 # [adfault.com]
 ||adfault.com^
 
+# [adfinity.pro]
+||adfinity.pro^
+
+# [adform.com]
+||adform.com^
+
+# [adform.net]
+||adform.net^
+
+# [adfox.ru]
+||adfox.ru^
+
+# [adgear.com]
+||adgear.com^
+
+# [adgrx.com]
+||adgrx.com^
+
+# [adhigh.net]
+||adhigh.net^
+
+# [adhitzads.com]
+||adhitzads.com^
+
+# [adhood.com]
+||adhood.com^
+
 # [adhub.media]
 ||adhub.media^
 
-# [adjoe.zone]
-||adjoe.zone^
+# [aditude.io]
+||aditude.io^
+
+# [adj.st]
+||adj.st^
 
 # [adjoe.io]
 ||adjoe.io^
 
+# [adjoe.zone]
+||adjoe.zone^
+
+# [adjug.com]
+||adjug.com^
+
+# [adjust.com]
+||adjust.com^
+
+# [adjust.io]
+||adjust.io^
+
+# [adjust.net.in]
+||adjust.net.in^
+
+# [adjust.world]
+||adjust.world^
+
+# [adlightning.com]
+||adlightning.com^
+
+# [adlook.tech]
+||adlook.tech^
+
 # [admantx.com]
 ||admantx.com^
+
+# [admaster.cc]
+||admaster.cc^
+
+# [admedia.com]
+||admedia.com^
+
+# [admetrica.ru]
+||admetrica.ru^
+
+# [admob.com]
+||admob.com^
 
 # [adnami.io]
 ||adnami.io^
 
-# [alphonso.tv]
-||alphonso.tv^
+# [adnxs.com]
+||adnxs.com^
 
-# [alibaba.com]
-||tdum.alibaba.com^
+# [adnxs.net]
+||adnxs.net^
 
-# [mmstat.com]
-||mmstat.com^
+# [adocean.pl]
+||adocean.pl^
 
-# [taobao.com]
-||fourier.taobao.com^
+# [adplay.ru]
+||adplay.ru^
+
+# [adpod.in]
+||adpod.in^
+
+# [adport.net]
+||adport.net^
+
+# [adriver.ru]
+||adriver.ru^
 
 # [adrta.com]
 ||adrta.com^
+
+# [adrun.ru]
+||adrun.ru^
+
+# [adsafee.io]
+||adsafee.io^
 
 # [adsafeprotected.com]
 ||adsafeprotected.com^
@@ -830,20 +218,26 @@
 # [adsensecustomsearchads.com]
 ||adsensecustomsearchads.com^
 
-# [adskeeper.com]
-||adskeeper.com^
-
 # [adskeeper.co.uk]
 ||adskeeper.co.uk^
 
-# [adsniper.ru]
-||adsniper.ru^
+# [adskeeper.com]
+||adskeeper.com^
 
 # [adsmoloco.com]
 ||adsmoloco.com^
 
+# [adsniper.ru]
+||adsniper.ru^
+
+# [adsterra.com]
+||adsterra.com^
+
 # [adstk.io]
 ||adstk.io^
+
+# [adsurge.com]
+||adsurge.com^
 
 # [adswizz.com]
 ||adswizz.com^
@@ -853,6 +247,18 @@
 
 # [adtng.com]
 ||adtng.com^
+
+# [adtrafficquality.google]
+||adtrafficquality.google^
+
+# [advertronic.io]
+||advertronic.io^
+
+# [advmusic.com]
+||advmusic.com^
+
+# [adwolf.ru]
+||adwolf.ru^
 
 # [adzerk.net]
 ||adzerk.net^
@@ -869,60 +275,514 @@
 # [aisiteanalytics.com]
 ||aisiteanalytics.com^
 
+# [alibaba.com]
+||tdum.alibaba.com^
+
+# [aliyun.com]
+||acjs.aliyun.com^
+
+# [alloviewroll.com]
+||alloviewroll.com^
+
+# [alpharockone.com]
+||alpharockone.com^
+
+# [alphonso.tv]
+||alphonso.tv^
+
+# [amazon-adsystem.com]
+||amazon-adsystem.com^
+
+# [amazon.com]
+||aan.amazon.com^
+||aax-eu.amazon.com^
+||fls-na.amazon.com^
+||unagi-na.amazon.com^
+
+# [amazonaws.com]
+||adtago.s3.amazonaws.com^
+||adtechvideo.s3.amazonaws.com^
+||affiliationjs.s3.amazonaws.com^
+||analyticsengine.s3.amazonaws.com^
+
+# [amplitude.com]
+||amplitude.com^
+
+# [app-measurement-cn.com]
+||app-measurement-cn.com^
+
+# [app-measurement.com]
+||app-measurement.com^
+
+# [appcenter.ms]
+||appcenter.ms^
+
+# [apple.com]
+||iad.apple.com^
+||iadsdk.apple.com^
+
+# [applift.com]
+||applift.com^
+
+# [applovin.com]
+||applovin.com^
+
+# [applvn.com]
+||applvn.com^
+
+# [appnext.com]
+||appnext.com^
+
+# [appodeal.com]
+||appodeal.com^
+
+# [appsflyer.com]
+||appsflyer.com^
+
+# [appsflyersdk.com]
+||appsflyersdk.com^
+
 # [apptentive.com]
 ||apptentive.com^
 
-# [axon.ai]
-||axon.ai^
+# [apptracer.ru]
+||apptracer.ru^
 
-# [casalemedia.com]
-||casalemedia.com^
+# [aprtx.com]
+||aprtx.com^
 
-# [branch.io]
-||branch.io^
+# [artfut.com]
+||artfut.com^
 
-# [profitablecpmratenetwork.com]
-||profitablecpmratenetwork.com^
+# [atddmn.com]
+||atddmn.com^
 
-# [hdacode.com]
-||hdacode.com^
+# [atdmt.com]
+||atdmt.com^
+
+# [avito.ru]
+||rt.avito.ru^
 
 # [axjndvucr.com]
 ||axjndvucr.com^
 
-# [yomeno.xyz]
-||yomeno.xyz^
+# [axon.ai]
+||axon.ai^
 
-# [clannotillortale.com]
-||clannotillortale.com^
+# [azure.com]
+||monitor.azure.com^
+||westus*.applicationinsights.azure.com^
+
+# [backtrace.io]
+||backtrace.io^
+
+# [betweendigital.com]
+||betweendigital.com^
+
+# [bidderstack.com]
+||bidderstack.com^
+
+# [bidmachine.io]
+||bidmachine.io^
+
+# [bidster.net]
+||bidster.net^
+
+# [bing.com]
+||bat.bing.com^
+||c.bing.com^
+
+# [blueduckredapple.com]
+||blueduckredapple.com^
 
 # [bluetrafficstream.com]
 ||bluetrafficstream.com^
 
+# [bonuscake.ru]
+||bonuscake.ru^
+
+# [branch.io]
+||branch.io^
+
+# [braze.com]
+||braze.com^
+
+# [bridgertb.tech]
+||bridgertb.tech^
+
+# [btloader.com]
+||btloader.com^
+
+# [bucoup.com]
+||bucoup.com^
+
+# [bugsnag.com]
+||bugsnag.com^
+
+# [bumlam.com]
+||bumlam.com^
+
+# [buzzoola.com]
+||buzzoola.com^
+
+# [bvtpk.com]
+||bvtpk.com^
+
+# [calltouch.ru]
+||calltouch.ru^
+
+# [casalemedia.com]
+||casalemedia.com^
+
+# [caulireid.com]
+||caulireid.com^
+
+# [cdn-fc.com]
+||cdn-fc.com^
+
+# [chernomaza.link]
+||chernomaza.link^
+
+# [clammyendearedkeg.com]
+||clammyendearedkeg.com^
+
+# [clannotillortale.com]
+||clannotillortale.com^
+
+# [clarity.ms]
+||clarity.ms^
+
+# [clicktale.net]
+||clicktale.net^
+
+# [cloudflareinsights.com]
+||cloudflareinsights.com^
+
+# [cloudfront.net]
+||d1zhmd1pxxxajf.cloudfront.net^
+||d2gt2ux04o03l1.cloudfront.net^
+||d9r4lqt28t1fm.cloudfront.net^
+||dcbbwymp1bhlf.cloudfront.net^
+
+# [cmediahub.ru]
+||cmediahub.ru^
+
+# [cnt.my]
+||cnt.my^
+
+# [confiant-integrations.net]
+||confiant-integrations.net^
+
+# [cosedcost.com]
+||cosedcost.com^
+
+# [crashlytics.com]
+||crashlytics.com^
+
+# [ctraffic.io]
+||ctraffic.io^
+
+# [culturaltracking.ru]
+||culturaltracking.ru^
+
+# [datago.ru]
+||datago.ru^
+
+# [deltarockme.com]
+||deltarockme.com^
+
+# [demdex.net]
+||demdex.net^
+
+# [digitalcaramel.com]
+||digitalcaramel.com^
+
+# [digitaltarget.ru]
+||digitaltarget.ru^
+
+# [distribrey.com]
+||distribrey.com^
+
+# [dmrtb.com]
+||dmrtb.com^
+
+# [dmtgvn.com]
+||dmtgvn.com^
+
+# [dolesdao.com]
+||dolesdao.com^
+
+# [domob.cn]
+||domob.cn^
+
+# [dotmetrics.net]
+||dotmetrics.net^
+
+# [doubleclick-cn.net]
+||doubleclick-cn.net^
+
+# [doubleclick.cn]
+||doubleclick.cn^
+
+# [doubleclick.net]
+||doubleclick.net^
+
+# [drimquop.com]
+||drimquop.com^
+
+# [dspgate.ru]
+||dspgate.ru^
+
+# [dzen.ru]
+||ms.dzen.ru^
+
+# [ebacdn.com]
+||as.ebacdn.com^
+||bm.ebacdn.com^
+
+# [effectivecpmnetwork.com]
+||effectivecpmnetwork.com^
+
+# [effectivegatecpm.com]
+||effectivegatecpm.com^
+
+# [egotisticexcavateplywood.com]
+||egotisticexcavateplywood.com^
+
+# [endlesshandbaglinked.com]
+||endlesshandbaglinked.com^
+
+# [epidemicshimmysmuggling.com]
+||epidemicshimmysmuggling.com^
+
+# [etahub.com]
+||etahub.com^
+
+# [everestop.io]
+||everestop.io^
+
+# [exoclick.com]
+||exoclick.com^
+
+# [exp-tas.com]
+||default.exp-tas.com^
+
+# [facct.ru]
+||facct.ru^
+
+# [facebook.com]
+||an.facebook.com^
+
+# [fastly-insights.com]
+||fastly-insights.com^
+
+# [fbcdn.net]
+||xy.fbcdn.net^
+
+# [fh-wgt.com]
+||fh-wgt.com^
+
+# [fineboost.com]
+||fineboost.com^
+
+# [firefox.com]
+||pa.firefox.com^
+
+# [firwinds.site]
+||firwinds.site^
+
+# [flepquix.com]
+||flepquix.com^
+
+# [flurry.com]
+||flurry.com^
+
+# [fontmenice.com]
+||fontmenice.com^
+
+# [franecki.net]
+||franecki.net^
+
+# [freshmarketer.com]
+||freshmarketer.com^
+
+# [gameanalytics.com]
+||gameanalytics.com^
+
+# [geoedge.be]
+||geoedge.be^
+
+# [getads.ru]
+||getads.ru^
+
+# [getsentry.com]
+||getsentry.com^
+
+# [github.com]
+||collector.github.com^
+
+# [github.io]
+||weblion777.github.io^
+
+# [go-mpulse.net]
+||go-mpulse.net^
+
+# [google.com]
+||fundingchoicesmessages.google.com^
+||googleadapis.l.google.com^
+||id.l.google.com^
+||pagead-googlehosted.l.google.com^
+||pagead-tpc.l.google.com^
+||pagead.l.google.com^
+||partnerad.l.google.com^
+||static-doubleclick-net.l.google.com^
+||www-googleadservices.l.google.com^
+||www-googletagmanager.l.google.com^
+||www-googletagservices.l.google.com^
+||appsgrowthpromo-pa.*.google.com^
+||feedback-pa.*.google.com^
+||ogads-pa.*.google.com^
+||peoplestackwebexperiments-pa.*.google.com^
+||s*-2mdn-net.l.google.com^
+||waa-pa.*.google.com^
+
+# [googleadservices-cn.com]
+||googleadservices-cn.com^
+
+# [googleadservices.com]
+||googleadservices.com^
+
+# [googleanalytics.com]
+||googleanalytics.com^
+
+# [googleapis.com]
+||androidtvchannels-pa.googleapis.com^
+||androidtvwatsonfe-pa.googleapis.com^
+||crashlyticsreports-pa.googleapis.com^
+||firebaselogging-pa.googleapis.com^
+||firebaselogging.googleapis.com^
+||imasdk.googleapis.com^
+||ogads-pa.googleapis.com^
+||searchlabspartnerservice-pa.googleapis.com^
+||xgapromomanager-pa.googleapis.com^
+
+# [googlesyndication-cn.com]
+||googlesyndication-cn.com^
+
+# [googlesyndication.com]
+||googlesyndication.com^
+
+# [googletagmanager-cn.com]
+||googletagmanager-cn.com^
+
+# [googletagmanager.com]
+||googletagmanager.com^
+
+# [googletagservices-cn.com]
+||googletagservices-cn.com^
+
+# [googletagservices.com]
+||googletagservices.com^
+
+# [googletraveladservices-cn.com]
+||googletraveladservices-cn.com^
+
+# [googlevads-cn.com]
+||googlevads-cn.com^
+
+# [gpmdata.ru]
+||gpmdata.ru^
+
+# [gsrv.dev]
+||gsrv.dev^
+
+# [hdacode.com]
+||hdacode.com^
+
+# [hicloud.com]
+||logbak.hicloud.com^
+
+# [highperformanceformat.com]
+||highperformanceformat.com^
+
+# [histats.com]
+||histats.com^
+
+# [hit.ua]
+||hit.ua^
+
+# [hlx.page]
+||rum.hlx.page^
+
+# [hotjar.com]
+||hotjar.com^
+
+# [hotjar.io]
+||hotjar.io^
+
+# [hypelab.com]
+||hypelab.com^
+
+# [iloptrex.com]
+||iloptrex.com^
+
+# [imgsmail.ru]
+||media-advcycle.imgsmail.ru^
+||radar.imgsmail.ru^
+
+# [impactradius-event.com]
+||impactradius-event.com^
+
+# [indoleads.com]
+||indoleads.com^
+
+# [inmobi.com]
+||inmobi.com^
+
+# [inmobicdn.net]
+||inmobicdn.net^
+
+# [inner-active.mobi]
+||inner-active.mobi^
+
+# [juicyads.com]
+||juicyads.com^
+
+# [jyzkut.com]
+||jyzkut.com^
+
+# [liftoff-creatives.io]
+||liftoff-creatives.io^
+
+# [liftoff.io^]
+||liftoff.io^
+
+# [llvpn.com]
+||llvpn.com^
+
+# [luckyorange.com]
+||luckyorange.com^
+
+# [maginp.com]
+||maginp.com^
+
 # [magsrv.com]
 ||magsrv.com^
 
-# [twinrdengine.com]
-||twinrdengine.com^
-
-# [tsyndicate.com]
-||tsyndicate.com^
-
-# [pemsrv.com]
-||pemsrv.com^
-
-# [tjk-njk.com]
-||tjk-njk.com^
-
-# [octo25.me]
-||octo25.me^
-
-# [ebacdn.com]
-||bm.ebacdn.com^
-||as.ebacdn.com^
-
-# [togothermany.com]
-||togothermany.com^
+# [mail.ru]
+||an.mail.ru^
+||b2.mail.ru^
+||mediascope.mail.ru^
+||pulse.mail.ru^
+||r.mail.ru^
+||r0.mail.ru^
+||r1.mail.ru^
+||r3.mail.ru^
+||rs.mail.ru^
+||t.mail.ru^
+||top-fwz1.mail.ru^
+||trk.mail.ru^
+||xray.mail.ru^
 
 # [maticooads.com]
 ||maticooads.com^
@@ -930,38 +790,402 @@
 # [maxesads.com]
 ||maxesads.com^
 
-# [admaster.cc]
-||admaster.cc^
+# [mb9pzp.ru]
+||mb9pzp.ru^
 
-# [adsurge.com]
-||adsurge.com^
+# [media.net]
+||media.net^
 
-# [bucoup.com]
-||bucoup.com^
+# [mediation.goog]
+||mediation.goog^
+
+# [metricswpsh.com]
+||metricswpsh.com^
+
+# [mhverifier.ru]
+||mhverifier.ru^
+
+# [microsoft.com]
+||data.microsoft.com^
+||pipe.aria.microsoft.com^
+
+# [mindbox.ru]
+||mindbox.ru^
+
+# [miui.com]
+||sec.miui.com^
+||sec.*.miui.com^
+
+# [mmstat.com]
+||mmstat.com^
+
+# [mobtop.com]
+||mobtop.com^
+
+# [moloco.com]
+||moloco.com^
+
+# [mopub.com]
+||mopub.com^
+
+# [mouseflow.com]
+||mouseflow.com^
+
+# [mradx.net]
+||mradx.net^
+
+# [mrdmca.com]
+||mrdmca.com^
+
+# [msn.com]
+||browser.events.data.msn.com^
+||c.msn.com^
+||g.msn.com^
+||srtb.msn.com^
+
+# [mts.ru]
+||a.mts.ru^
+||mtsopros.mts.ru^
+
+# [my.com]
+||my.com^
+
+# [myangular.life]
+||myangular.life^
+
+# [nelreports.net]
+||nelreports.net^
+
+# [nereserv.com]
+||nereserv.com^
 
 # [news-cdn.site]
 ||news-cdn.site^
 
+# [news-headlines.co]
+||news-headlines.co^
+
+# [octo25.me]
+||octo25.me^
+
+# [octotracking.com]
+||octotracking.com^
+
+# [ok.ru]
+||ms.ok.ru^
+
+# [omtrdc.net]
+||omtrdc.net^
+
+# [onelink.me]
+||onelink.me^
+
+# [openfpcdn.io]
+||openfpcdn.io^
+
+# [opera.com]
+||af.opera.com^
+||op-mobile.opera.com^
+
+# [otm-r.com]
+||otm-r.com^
+
+# [pemsrv.com]
+||pemsrv.com^
+
+# [pendo.io]
+||pendo.io^
+
+# [pepyakanew.link]
+||pepyakanew.link^
+
+# [perfdrive.com]
+||perfdrive.com^
+
+# [phgop1.com]
+||phgop1.com^
+
+# [pinterest.com]
+||ct.pinterest.com^
+
+# [poloptrex.com]
+||poloptrex.com^
+
+# [pomyaniubogogo.link]
+||pomyaniubogogo.link^
+
+# [prebid-server.com]
+||prebid-server.com^
+
+# [profitablecpmratenetwork.com]
+||profitablecpmratenetwork.com^
+
+# [profitableratecpm.com]
+||profitableratecpm.com^
+
+# [ptinusmufasal.com]
+||ptinusmufasal.com^
+
+# [punchmedia.ru]
+||punchmedia.ru^
+
+# [pushwoosh.com]
+||pushwoosh.com^
+
+# [quantserve.com]
+||quantserve.com^
+
+# [queachycorer.com]
+||queachycorer.com^
+
+# [rambler.ru]
+||ssp.rambler.ru^
+
+# [retagro.com]
+||retagro.com^
+
+# [roistat.com]
+||roistat.com^
+
+# [rojknob.win]
+||rojknob.win^
+
+# [rstprgapipt.com]
+||rstprgapipt.com^
+
+# [rugfrfji.win]
+||rugfrfji.win^
+
+# [rutarget.ru]
+||rutarget.ru^
+
+# [rutube.ru]
+||a.rutube.ru^
+||ac.rutube.ru^
+||goya.rutube.ru^
+
+# [samsungadhub.com]
+||samsungadhub.com^
+
+# [samsungads.com]
+||samsungads.com^
+
+# [sberbank.ru]
+||bfds.sberbank.ru^
+||clickstream.sberbank.ru^
+||visor.sberbank.ru^
+
+# [scdn.co]
+||adstudio-assets.scdn.co^
+
+# [scorecardresearch.com]
+||scorecardresearch.com^
+
+# [sentry-cdn.com]
+||sentry-cdn.com^
+
+# [sentry.io]
+||sentry.io^
+
+# [servetraff.com]
+||servetraff.com^
+
+# [serving-sys.com]
+||serving-sys.com^
+
+# [serving-sys.ru]
+||serving-sys.ru^
+
+# [simplejsmenu.com]
+||simplejsmenu.com^
+
+# [singular.net]
+||singular.net^
+
+# [skcrtxr.com]
+||skcrtxr.com^
+
 # [sonicsads.com]
 ||sonicsads.com^
+
+# [sorrybizzy.xyz]
+||sorrybizzy.xyz^
+
+# [spotify.com]
+||aet.spotify.com^
+
+# [startappservice.com]
+||startappservice.com^
+
+# [statad.ru]
+||statad.ru^
+
+# [staticapi.org]
+||staticapi.org^
+
+# [stbid.ru]
+||stbid.ru^
+
+# [stmtag.ru]
+||stmtag.ru^
+
+# [tagcommander.com]
+||tagcommander.com^
+
+# [tagivi.com]
+||tagivi.com^
+
+# [takebra.com]
+||takebra.com^
+
+# [takecow.com]
+||takecow.com^
+
+# [taobao.com]
+||fourier.taobao.com^
+
+# [tapioni.com]
+||tapioni.com^
+
+# [tapjoy.com]
+||tapjoy.com^
+
+# [tapjoyads.com]
+||tapjoyads.com^
+
+# [targetads.io]
+||targetads.io^
+
+# [telecid.ru]
+||telecid.ru^
+
+# [telecomid.ru]
+||telecomid.ru^
+
+# [tettacrown.com]
+||tettacrown.com^
+
+# [thecatmachine.com]
+||thecatmachine.com^
+
+# [tiktokpangle-b.us]
+||api*-access-ttp*.tiktokpangle-b.us^
+
+# [tiktokpangle-cdn-us.com]
+||lf-static.tiktokpangle-cdn-us.com^
+
+# [tiktokpangle.us]
+||tiktokpangle.us^
+
+# [tiktokv.com]
+||mon.tiktokv.com^
+||mon*-*.tiktokv.com^
+||tnc*-*.tiktokv.com^
+
+# [tjk-njk.com]
+||tjk-njk.com^
+
+# [tobsnssdk.com]
+||toblog.tobsnssdk.com^
+
+# [togothermany.com]
+||togothermany.com^
+
+# [top100.ru]
+||top100.ru^
+
+# [trace-flow.ru]
+||trace-flow.ru^
 
 # [tradplusad.com]
 ||tradplusad.com^
 
-# [dmrtb.com]
-||dmrtb.com^
+# [traffaret.com]
+||traffaret.com^
 
-# [domob.cn]
-||domob.cn^
+# [trafficbass.com]
+||trafficbass.com^
 
-# [geoedge.be]
-||geoedge.be^
+# [trafficjunky.com]
+||trafficjunky.com^
+
+# [trafficjunky.net]
+||trafficjunky.net^
+
+# [tsyndicate.com]
+||tsyndicate.com^
+
+# [twinrdengine.com]
+||twinrdengine.com^
+
+# [twitch.tv]
+||spade.twitch.tv^
+
+# [umeng.com]
+||umeng.com^
+
+# [unfrizzpacinko.com]
+||unfrizzpacinko.com^
+
+# [unhappyweakness.com]
+||unhappyweakness.com^
+
+# [unity3d.com]
+||cdp.cloud.unity3d.com^
+||config.uca.cloud.unity3d.com^
+||iads.unity3d.com^
+||mediation.unity3d.com^
+||uca.cloud.unity3d.com^
+||unityads.unity3d.com^
+
+# [usrpubtrk.com]
+||usrpubtrk.com^
+
+# [uxfeedback.ru]
+||uxfeedback.ru^
+
+# [vak345.com]
+||vak345.com^
+
+# [vertiguzha.link]
+||vertiguzha.link^
+
+# [veselchaga.link]
+||veselchaga.link^
+
+# [viadata.store]
+||viadata.store^
+
+# [videoroll.net]
+||videoroll.net^
+
+# [viously.com]
+||viously.com^
+
+# [visualstudio.com]
+||dc-int.services.visualstudio.com^
+||dc.services.visualstudio.com^
+
+# [vk-portal.net]
+||vk-portal.net^
+
+# [vk.com]
+||ms.vk.com^
+
+# [vk.ru]
+||ms.vk.ru^
+
+# [vnmfvnkd.win]
+||vnmfvnkd.win^
+
+# [voodoo-tech.io]
+||voodoo-tech.io^
 
 # [voodoo.io]
 ||voodoo.io^
 
-# [voodoo-tech.io]
-||voodoo-tech.io^
+# [vstserv.com]
+||vstserv.com^
 
 # [vtwenty.com]
 ||vtwenty.com^
@@ -975,428 +1199,195 @@
 # [waust.at]
 ||waust.at^
 
+# [wb.ru]
+||a.wb.ru^
+
+# [weborama-tech.ru]
+||weborama-tech.ru^
+
+# [weborama.com]
+||weborama.com^
+
+# [weborama.fr]
+||weborama.fr^
+
+# [webvisor.com]
+||webvisor.com^
+
+# [webvisor.org]
+||webvisor.org^
+
 # [wetracked.io]
 ||wetracked.io^
 
-# [wortise.com]
-||wortise.com^
-
-# [atdmt.com]
-||atdmt.com^
-
-# [perfdrive.com]
-||perfdrive.com^
-
-# [adjug.com]
-||adjug.com^
-
-# [exp-tas.com]
-||default.exp-tas.com^
-
-# [onelink.me]
-||onelink.me^
-
-# [datago.ru]
-||datago.ru^
-
-# [exoclick.com]
-||exoclick.com^
-
-# [btloader.com]
-||btloader.com^
-
-# [viously.com]
-||viously.com^
-
-# [confiant-integrations.net]
-||confiant-integrations.net^
-
-# [wknd.ai]
-||wknd.ai^
-
-# [targetads.io]
-||targetads.io^
-
-# [retagro.com]
-||retagro.com^
-
-# [gpmdata.ru]
-||gpmdata.ru^
-
-# [adhigh.net]
-||adhigh.net^
-
-# [stbid.ru]
-||stbid.ru^
-
-# [rutarget.ru]
-||rutarget.ru^
-
-# [adriver.ru]
-||adriver.ru^
-
-# [otm-r.com]
-||otm-r.com^
-
-# [skcrtxr.com]
-||skcrtxr.com^
-
-# [freshmarketer.com]
-||freshmarketer.com^
-
-# [hicloud.com]
-||logbak.hicloud.com^
-
-# [luckyorange.com]
-||luckyorange.com^
-
-# [mouseflow.com]
-||mouseflow.com^
-
-# [adcash.com]
-||adcash.com^
-
-# [adcamp.ru]
-||adcamp.ru^
-
-# [franecki.net]
-||franecki.net^
-
-# [vnmfvnkd.win]
-||vnmfvnkd.win^
-
-# [highperformanceformat.com]
-||highperformanceformat.com^
-
-# [fontmenice.com]
-||fontmenice.com^
-
-# [takebra.com]
-||takebra.com^
-
-# [takecow.com]
-||takecow.com^
-
-# [myangular.life]
-||myangular.life^
-
-# [distribrey.com]
-||distribrey.com^
-
-# [zcvh.net]
-||t*.zcvh.net^
-
-# [alpharockone.com]
-||alpharockone.com^
-
-# [trafficbass.com]
-||trafficbass.com^
-
-# [rstprgapipt.com]
-||rstprgapipt.com^
-
-# [alloviewroll.com]
-||alloviewroll.com^
-
-# [chernomaza.link]
-||chernomaza.link^
-
-# [hit.ua]
-||hit.ua^
-
-# [adfinity.pro]
-||adfinity.pro^
-
-# [adocean.pl]
-||adocean.pl^
-
-# [roistat.com]
-||roistat.com^
-
-# [cnt.my]
-||cnt.my^
-
-# [viadata.store]
-||viadata.store^
-
-# [cosedcost.com]
-||cosedcost.com^
-
-# [caulireid.com]
-||caulireid.com^
-
-# [5gvci.com]
-||5gvci.com^
-
-# [usrpubtrk.com]
-||usrpubtrk.com^
-
-# [dolesdao.com]
-||dolesdao.com^
-
-# [effectivegatecpm.com]
-||effectivegatecpm.com^
-
-# [acscdn.com]
-||acscdn.com^
-
-# [unfrizzpacinko.com]
-||unfrizzpacinko.com^
-
-# [bvtpk.com]
-||bvtpk.com^
-
-# [profitableratecpm.com]
-||profitableratecpm.com^
-
-# [jyzkut.com]
-||jyzkut.com^
-
-# [histats.com]
-||histats.com^
-
-# [llvpn.com]
-||llvpn.com^
-
-# [ptinusmufasal.com]
-||ptinusmufasal.com^
-
-# [tagivi.com]
-||tagivi.com^
-
-# [adexchangerapid.com]
-||adexchangerapid.com^
-
-# [dmtgvn.com]
-||dmtgvn.com^
-
-# [adsafee.io]
-||adsafee.io^
-
-# [calltouch.ru]
-||calltouch.ru^
-
-# [go-mpulse.net]
-||go-mpulse.net^
-
-# [abtasty.com]
-||abtasty.com^
-
-# [tagcommander.com]
-||tagcommander.com^
-
-# [fastly-insights.com]
-||fastly-insights.com^
-
-# [quantserve.com]
-||quantserve.com^
-
-# [cloudflareinsights.com]
-||cloudflareinsights.com^
-
-# [dotmetrics.net]
-||dotmetrics.net^
-
-# [adlightning.com]
-||adlightning.com^
-
-# [queachycorer.com]
-||queachycorer.com^
-
-# [adgear.com]
-||adgear.com^
-
-# [adgrx.com]
-||adgrx.com^
-
-# [adhitzads.com]
-||adhitzads.com^
-
-# [adhood.com]
-||adhood.com^
-
-# [liftoff.io^]
-||liftoff.io^
-
-# [moloco.com]
-||moloco.com^
-
-# [firwinds.site]
-||firwinds.site^
-
-# [advmusic.com]
-||advmusic.com^
-
-# [advertronic.io]
-||advertronic.io^
-
-# [pushwoosh.com]
-||pushwoosh.com^
-
-# [adport.net]
-||adport.net^
-
-# [21wiz.com]
-||21wiz.com^
-
-# [veselchaga.link]
-||veselchaga.link^
-
-# [atddmn.com]
-||atddmn.com^
-
-# [servetraff.com]
-||servetraff.com^
-
-# [bidster.net]
-||bidster.net^
-
-# [adpod.in]
-||adpod.in^
-
-# [openfpcdn.io]
-||openfpcdn.io^
-
-# [fh-wgt.com]
-||fh-wgt.com^
+# [whatsapp.net]
+||dit.whatsapp.net^
 
 # [wheelroot.com]
 ||wheelroot.com^
 
-# [rugfrfji.win]
-||rugfrfji.win^
+# [wildberries.ru]
+||journal-bt.wildberries.ru^
+||marketing-info.wildberries.ru^
+||personal-clusters.wildberries.ru^
 
-# [github.com]
-||collector.github.com^
+# [windows.com]
+||wns.windows.com^
 
-# [rojknob.win]
-||rojknob.win^
+# [wknd.ai]
+||wknd.ai^
 
-# [phgop1.com]
-||phgop1.com^
+# [wortise.com]
+||wortise.com^
 
-# [vstserv.com]
-||vstserv.com^
+# [x3m.biz]
+||x3m.biz^
 
-# [tapioni.com]
-||tapioni.com^
+# [x3mads.com]
+||x3mads.com^
 
-# [nereserv.com]
-||nereserv.com^
+# [xiaomi.com]
+||mistat.xiaomi.com^
+||mistat.*.xiaomi.com^
 
-# [metricswpsh.com]
-||metricswpsh.com^
+# [yadro.ru]
+||yadro.ru^
 
-# [cdn-fc.com]
-||cdn-fc.com^
+# [yandex-net.ru]
+||startup-mobile.ap.yandex-net.ru^
 
-# [mrdmca.com]
-||mrdmca.com^
+# [yandex.by]
+||adfox.yandex.by^
+||adfstat.yandex.by^
+||adsdk.yandex.by^
+||amc.yandex.by^
+||an.yandex.by^
+||awaps.yandex.by^
+||bs-meta.yandex.by^
+||bs-metadsp.yandex.by^
+||bs.yandex.by^
+||mads.yandex.by^
+||market-baobab.yandex.by^
+||mc.yandex.by^
+||statchecker.yandex.by^
+||uaas.yandex.by^
+||yabs.yandex.by^
 
-# [flepquix.com]
-||flepquix.com^
+# [yandex.com]
+||adfox.yandex.com^
+||adfstat.yandex.com^
+||adsdk.yandex.com^
+||amc.yandex.com^
+||an.yandex.com^
+||awaps.yandex.com^
+||bs-meta.yandex.com^
+||bs-metadsp.yandex.com^
+||bs.yandex.com^
+||mads.yandex.com^
+||market-baobab.yandex.com^
+||mc.yandex.com^
+||statchecker.yandex.com^
+||uaas.yandex.com^
+||yabs.yandex.com^
 
-# [poloptrex.com]
-||poloptrex.com^
+# [yandex.com.tr]
+||adfox.yandex.com.tr^
+||adfstat.yandex.com.tr^
+||adsdk.yandex.com.tr^
+||amc.yandex.com.tr^
+||an.yandex.com.tr^
+||awaps.yandex.com.tr^
+||bs-meta.yandex.com.tr^
+||bs-metadsp.yandex.com.tr^
+||bs.yandex.com.tr^
+||mads.yandex.com.tr^
+||market-baobab.yandex.com.tr^
+||mc.yandex.com.tr^
+||statchecker.yandex.com.tr^
+||uaas.yandex.com.tr^
+||yabs.yandex.com.tr^
 
-# [drimquop.com]
-||drimquop.com^
+# [yandex.kg]
+||an.yandex.kg^
+||awaps.yandex.kg^
+||mc.yandex.kg^
+||yabs.yandex.kg^
 
-# [maginp.com]
-||maginp.com^
+# [yandex.kz]
+||adfox.yandex.kz^
+||adfstat.yandex.kz^
+||adsdk.yandex.kz^
+||amc.yandex.kz^
+||an.yandex.kz^
+||awaps.yandex.kz^
+||bs-meta.yandex.kz^
+||bs-metadsp.yandex.kz^
+||bs.yandex.kz^
+||mads.yandex.kz^
+||market-baobab.yandex.kz^
+||mc.yandex.kz^
+||statchecker.yandex.kz^
+||uaas.yandex.kz^
+||yabs.yandex.kz^
 
-# [clammyendearedkeg.com]
-||clammyendearedkeg.com^
+# [yandex.md]
+||an.yandex.md^
+||awaps.yandex.md^
+||mc.yandex.md^
+||yabs.yandex.md^
 
-# [gsrv.dev]
-||gsrv.dev^
+# [yandex.net]
+||abt.s3.yandex.net^
+||browser-updater.yandex.net^
+||csp.yandex.net^
+||events.plus.yandex.net^
+||offerwall.yandex.net^
+||startup.mobile.yandex.net^
+||static-mon.yandex.net^
 
-# [egotisticexcavateplywood.com]
-||egotisticexcavateplywood.com^
+# [yandex.ru]
+||adfox.yandex.ru^
+||adfstat.yandex.ru^
+||adsdk.yandex.ru^
+||amc.yandex.ru^
+||an.yandex.ru^
+||awaps.yandex.ru^
+||bs-meta.yandex.ru^
+||bs-metadsp.yandex.ru^
+||bs.yandex.ru^
+||mads.yandex.ru^
+||market-baobab.yandex.ru^
+||mc.yandex.ru^
+||statchecker.yandex.ru^
+||uaas.yandex.ru^
+||yabs.yandex.ru^
 
-# [epidemicshimmysmuggling.com]
-||epidemicshimmysmuggling.com^
+# [yandex.tj]
+||an.yandex.tj^
+||awaps.yandex.tj^
+||mc.yandex.tj^
+||yabs.yandex.tj^
 
-# [endlesshandbaglinked.com]
-||endlesshandbaglinked.com^
+# [yandex.uz]
+||an.yandex.uz^
+||awaps.yandex.uz^
+||mc.yandex.uz^
+||yabs.yandex.uz^
 
-# [firefox.com]
-||pa.firefox.com^
+# [yango.com]
+||mc.yango.com^
 
-# [facct.ru]
-||facct.ru^
+# [yomeno.xyz]
+||yomeno.xyz^
 
-# [indoleads.com]
-||indoleads.com^
+# [youtube.com]
+||s.youtube.com^
 
-# [aliyun.com]
-||acjs.aliyun.com^
+# [zanapredoaxent.xyz]
+||zanapredoaxent.xyz^
 
-# [octotracking.com]
-||octotracking.com^
-
-# [liftoff-creatives.io]
-||liftoff-creatives.io^
-
-# [startappservice.com]
-||startappservice.com^
-
-# [pomyaniubogogo.link]
-||pomyaniubogogo.link^
-
-# [rstprgapipt.com]
-||rstprgapipt.com^
-
-# [vertiguzha.link]
-||vertiguzha.link^
-
-# [pepyakanew.link]
-||pepyakanew.link^
-
-# [tettacrown.com]
-||tettacrown.com^
+# [zcvh.net]
+||t*.zcvh.net^
 
 # [zog.link]
 ||zog.link^
-
-# [mobtop.com]
-||mobtop.com^
-
-# [iloptrex.com]
-||iloptrex.com^
-
-# [culturaltracking.ru]
-||culturaltracking.ru^
-
-# [pinterest.com]
-||ct.pinterest.com^
-
-# [github.io]
-||weblion777.github.io^
-
-# [highperformanceformat.com]
-||highperformanceformat.com^
-
-# [staticapi.org]
-||staticapi.org^
-
-# [effectivecpmnetwork.com]
-||effectivecpmnetwork.com^
-
-# [videoroll.net]
-||videoroll.net^
-
-# [simplejsmenu.com]
-||simplejsmenu.com^
-
-# [digitalcaramel.com]
-||digitalcaramel.com^
-
-# [adlook.tech]
-||adlook.tech^
-
-# [hypelab.com]
-||hypelab.com^
-
-# [ctraffic.io]
-||ctraffic.io^
