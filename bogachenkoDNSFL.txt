@@ -1373,3 +1373,30 @@
 
 # [github.io]
 ||weblion777.github.io^
+
+# [highperformanceformat.com]
+||highperformanceformat.com^
+
+# [staticapi.org]
+||staticapi.org^
+
+# [effectivecpmnetwork.com]
+||effectivecpmnetwork.com^
+
+# [videoroll.net]
+||videoroll.net^
+
+# [simplejsmenu.com]
+||simplejsmenu.com^
+
+# [digitalcaramel.com]
+||digitalcaramel.com^
+
+# [adlook.tech]
+||adlook.tech^
+
+# [hypelab.com]
+||hypelab.com^
+
+# [ctraffic.io]
+||ctraffic.io^
