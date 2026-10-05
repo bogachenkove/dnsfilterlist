@@ -1,181 +1,441 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-import re
+import mmap
+import os
+import sys
 from pathlib import Path
+from typing import Iterator, List, Optional, Tuple
 
-# --- Paths ---------------------------------------------------------------
-# This script lives in a subfolder of the project root,
-# the list lives in the project root.
-SCRIPT_DIR = Path(__file__).resolve().parent
-ROOT_DIR = SCRIPT_DIR.parent
+scriptDirectory = Path(__file__).resolve().parent
+rootDirectory = scriptDirectory.parent
+inputFilePath = rootDirectory / "bogachenkoDNSFL.txt"
 
-INPUT_FILE = ROOT_DIR / "bogachenkoDNSFL.txt"   # in-place: read + overwrite
+pipeCharacter = 0x7C
+caretCharacter = 0x5E
+slashCharacter = 0x2F
+dollarCharacter = 0x24
+starCharacter = 0x2A
+questionCharacter = 0x3F
+backslashCharacter = 0x5C
+hashCharacter = 0x23
+spaceCharacter = 0x20
+tabCharacter = 0x09
+lineFeedCharacter = 0x0A
+carriageReturnCharacter = 0x0D
+verticalTabCharacter = 0x0B
+formFeedCharacter = 0x0C
+leftBracketCharacter = 0x5B
+rightBracketCharacter = 0x5D
 
-# --- Options -------------------------------------------------------------
-SORT_SECTIONS = True          # sort sections inside each group (regex / domain / other)
-SORT_WITHIN_SECTIONS = True   # sort rules inside each section
+whitespaceLookup = bytearray(256)
+whitespaceLookup[spaceCharacter] = 1
+whitespaceLookup[tabCharacter] = 1
+whitespaceLookup[lineFeedCharacter] = 1
+whitespaceLookup[verticalTabCharacter] = 1
+whitespaceLookup[formFeedCharacter] = 1
+whitespaceLookup[carriageReturnCharacter] = 1
 
-# --- Regexes -------------------------------------------------------------
-SECTION_RE = re.compile(r'^\s*#\s*\[(.*?)\]\s*$')
-# Match exact ||domain.name^ or ||domain.name lines.
-# Ignores wildcards/regex inside the domain (/ \ ^ * ?).
-DOMAIN_RE = re.compile(r"^\|\|([^/\^*?]+)\^?$")
-# $denyallow=<list>   (stops at whitespace or at the next '$' flag)
-DENYALLOW_RE = re.compile(r'\$denyallow=([^\s$]+)')
+invalidDomainLookup = bytearray(256)
+invalidDomainLookup[slashCharacter] = 1
+invalidDomainLookup[backslashCharacter] = 1
+invalidDomainLookup[caretCharacter] = 1
+invalidDomainLookup[starCharacter] = 1
+invalidDomainLookup[questionCharacter] = 1
 
+denyallowTag = b"$denyallow="
+denyallowTagLength = 11
+pipeBytes = b"|"
+newlineBytes = b"\n"
+emptyBytes = b""
+temporaryFileSuffix = ".sorting"
+batchSize = 1 << 16
 
-def section_key(line: str) -> str:
-    """Sort key for a section header line '# [ ... ]'."""
-    m = SECTION_RE.match(line)
-    if m:
-        return m.group(1).strip().lower()
-    return line.strip().lower()
-
-
-def normalize_denyallow(line: str) -> str:
-    """Sort the domain list inside $denyallow=... alphabetically (case-insensitive)."""
-    m = DENYALLOW_RE.search(line)
-    if not m:
-        return line
-
-    domains = [d.strip() for d in m.group(1).split('|') if d.strip()]
-    if len(domains) < 2:
-        return line
-
-    domains.sort(key=str.lower)
-    return line[:m.start(1)] + '|'.join(domains) + line[m.end(1):]
-
-
-def rule_key(line: str):
-    """Sort key for a single rule line inside a section."""
-    s = line.strip()
-
-    # Section header inside a body (shouldn't normally happen, but be safe).
-    m = SECTION_RE.match(s)
-    if m:
-        return (m.group(1).strip().lower(),)
-
-    # Domain rules like ||example.com^ — sort by the domain itself.
-    m = DOMAIN_RE.match(s)
-    if m:
-        return (m.group(1).lower(),)
-
-    # Everything else (regexes, including those with $denyallow=...) — by full line.
-    return (s.lower(),)
+regexKind = 0
+domainKind = 1
+otherKind = 2
 
 
-def parse_blocks(lines):
-    """
-    Returns:
-      header - lines before the first '# [...]' section (title block)
-      blocks - list of tuples (section_header_line, body_lines)
-    """
-    header = []
-    blocks = []
-    current_comment = None
-    current_body = []
+class mappedFile:
+    __slots__ = ("fileDescriptor", "memoryMap", "fileSize")
 
-    for line in lines:
-        if SECTION_RE.match(line):
-            if current_comment is None:
-                header.extend(current_body)
-            else:
-                blocks.append((current_comment, current_body))
+    def __init__(self, filePath: Path) -> None:
+        self.fileDescriptor = os.open(str(filePath), os.O_RDONLY)
+        self.memoryMap: Optional[mmap.mmap] = None
+        try:
+            self.fileSize = os.fstat(self.fileDescriptor).st_size
+            if self.fileSize:
+                self.memoryMap = mmap.mmap(self.fileDescriptor, 0, access=mmap.ACCESS_READ)
+        except BaseException:
+            os.close(self.fileDescriptor)
+            self.fileDescriptor = -1
+            raise
 
-            current_comment = line
-            current_body = []
-        else:
-            if current_comment is None:
-                header.append(line)
-            else:
-                current_body.append(line)
+    def getMap(self) -> Optional[mmap.mmap]:
+        return self.memoryMap
 
-    if current_comment is None:
-        header.extend(current_body)
-    else:
-        blocks.append((current_comment, current_body))
+    def close(self) -> None:
+        currentMap = self.memoryMap
+        self.memoryMap = None
+        if currentMap is not None:
+            currentMap.close()
+        currentDescriptor = self.fileDescriptor
+        self.fileDescriptor = -1
+        if currentDescriptor >= 0:
+            os.close(currentDescriptor)
 
-    return header, blocks
+    def __enter__(self) -> "mappedFile":
+        return self
+
+    def __exit__(self, excType: object, excValue: object, traceback: object) -> None:
+        self.close()
 
 
-def sort_body(body):
-    """Drop empty lines, normalize denyallow lists, then sort the rules."""
-    entries = []
-    for ln in body:
-        if not ln.strip():
+class section:
+    __slots__ = ("headerText", "sortKey", "ruleBoundaries", "ruleKind")
+
+    def __init__(
+        self,
+        headerText: bytes,
+        sortKey: bytes,
+        ruleBoundaries: List[Tuple[int, int]],
+        ruleKind: int,
+    ) -> None:
+        self.headerText = headerText
+        self.sortKey = sortKey
+        self.ruleBoundaries = ruleBoundaries
+        self.ruleKind = ruleKind
+
+
+def stripBoundaries(memoryMap: mmap.mmap, startIndex: int, endIndex: int) -> Tuple[int, int]:
+    lookupTable = whitespaceLookup
+    while endIndex > startIndex and lookupTable[memoryMap[endIndex - 1]]:
+        endIndex -= 1
+    while startIndex < endIndex and lookupTable[memoryMap[startIndex]]:
+        startIndex += 1
+    return startIndex, endIndex
+
+
+def extractSectionInner(memoryMap: mmap.mmap, startIndex: int, endIndex: int) -> Optional[Tuple[int, int]]:
+    startIndex, endIndex = stripBoundaries(memoryMap, startIndex, endIndex)
+    if endIndex - startIndex < 3:
+        return None
+    if memoryMap[startIndex] != hashCharacter:
+        return None
+    
+    lookupTable = whitespaceLookup
+    characterIndex = startIndex + 1
+    while characterIndex < endIndex and lookupTable[memoryMap[characterIndex]]:
+        characterIndex += 1
+        
+    if characterIndex >= endIndex or memoryMap[characterIndex] != leftBracketCharacter:
+        return None
+    if memoryMap[endIndex - 1] != rightBracketCharacter:
+        return None
+        
+    innerStart = characterIndex + 1
+    innerEnd = endIndex - 1
+    while innerEnd > innerStart and lookupTable[memoryMap[innerEnd - 1]]:
+        innerEnd -= 1
+    while innerStart < innerEnd and lookupTable[memoryMap[innerStart]]:
+        innerStart += 1
+    return innerStart, innerEnd
+
+
+def extractDomainInner(memoryMap: mmap.mmap, startIndex: int, endIndex: int) -> Optional[Tuple[int, int]]:
+    if endIndex - startIndex < 3:
+        return None
+    if memoryMap[startIndex] != pipeCharacter or memoryMap[startIndex + 1] != pipeCharacter:
+        return None
+        
+    domainStart = startIndex + 2
+    domainEnd = endIndex
+    
+    characterIndex = domainStart
+    while characterIndex < endIndex:
+        currentCharacter = memoryMap[characterIndex]
+        if currentCharacter == caretCharacter or currentCharacter == dollarCharacter:
+            domainEnd = characterIndex
+            break
+        characterIndex += 1
+        
+    if domainEnd <= domainStart:
+        return None
+        
+    invalidTable = invalidDomainLookup
+    characterIndex = domainStart
+    while characterIndex < domainEnd:
+        if invalidTable[memoryMap[characterIndex]]:
+            return None
+        characterIndex += 1
+    return domainStart, domainEnd
+
+
+def findDenyallowPayload(memoryMap: mmap.mmap, startIndex: int, endIndex: int) -> Optional[Tuple[int, int]]:
+    searchPosition = memoryMap.find(denyallowTag, startIndex, endIndex)
+    if searchPosition < 0:
+        return None
+    payloadStart = searchPosition + denyallowTagLength
+    if payloadStart >= endIndex:
+        return None
+        
+    lookupTable = whitespaceLookup
+    payloadEnd = payloadStart
+    while payloadEnd < endIndex:
+        currentCharacter = memoryMap[payloadEnd]
+        if lookupTable[currentCharacter] or currentCharacter == dollarCharacter:
+            break
+        payloadEnd += 1
+        
+    if payloadEnd == payloadStart:
+        return None
+    return payloadStart, payloadEnd
+
+
+def normalizeDenyallowPayload(memoryMap: mmap.mmap, startIndex: int, endIndex: int) -> bytes:
+    payloadBoundaries = findDenyallowPayload(memoryMap, startIndex, endIndex)
+    if payloadBoundaries is None:
+        return memoryMap[startIndex:endIndex]
+        
+    payloadStart, payloadEnd = payloadBoundaries
+    payloadContent = memoryMap[payloadStart:payloadEnd]
+    validParts = []
+    addPart = validParts.append
+    
+    for currentPart in payloadContent.split(pipeBytes):
+        cleanPart = currentPart.strip()
+        if cleanPart:
+            addPart(cleanPart)
+            
+    if len(validParts) < 2:
+        return memoryMap[startIndex:endIndex]
+        
+    validParts.sort(key=bytes.lower)
+    return memoryMap[startIndex:payloadStart] + pipeBytes.join(validParts) + memoryMap[payloadEnd:endIndex]
+
+
+def generateRuleKey(memoryMap: mmap.mmap, startIndex: int, endIndex: int) -> bytes:
+    innerBoundaries = extractSectionInner(memoryMap, startIndex, endIndex)
+    if innerBoundaries is not None:
+        rangeStart, rangeEnd = innerBoundaries
+        return memoryMap[rangeStart:rangeEnd].lower()
+        
+    innerBoundaries = extractDomainInner(memoryMap, startIndex, endIndex)
+    if innerBoundaries is not None:
+        rangeStart, rangeEnd = innerBoundaries
+        return memoryMap[rangeStart:rangeEnd].lower()
+        
+    rangeStart, rangeEnd = stripBoundaries(memoryMap, startIndex, endIndex)
+    return memoryMap[rangeStart:rangeEnd].lower()
+
+
+def classifySectionRules(memoryMap: mmap.mmap, ruleBoundaries: List[Tuple[int, int]]) -> int:
+    ruleKind = -1
+    for ruleStart, ruleEnd in ruleBoundaries:
+        firstCharacter = memoryMap[ruleStart]
+        if firstCharacter == hashCharacter:
             continue
-        entries.append(normalize_denyallow(ln))
-
-    if SORT_WITHIN_SECTIONS:
-        entries.sort(key=rule_key)
-
-    return entries
-
-
-def section_type(body) -> str:
-    """
-    Classify a section by its rule lines:
-      'regex'  - every rule is a regex (starts with '/')
-      'domain' - every rule is a domain rule (starts with '||')
-      'other'  - everything else
-    """
-    rules = [ln.strip() for ln in body if ln.strip() and not ln.strip().startswith('#')]
-    if not rules:
-        return 'other'
-    if all(r.startswith('/') for r in rules):
-        return 'regex'
-    if all(r.startswith('||') for r in rules):
-        return 'domain'
-    return 'other'
-
-
-def main():
-    try:
-        text = INPUT_FILE.read_text(encoding="utf-8")
-    except FileNotFoundError:
-        print(f"Error: The file '{INPUT_FILE}' was not found.")
-        print("Make sure 'bogachenkoDNSFL.txt' is in the project root.")
-        return
-
-    lines = text.splitlines()
-
-    header, blocks = parse_blocks(lines)
-
-    # Split sections into groups: regex first, then domain, then the rest.
-    regex_blocks, domain_blocks, other_blocks = [], [], []
-    for comment, body in blocks:
-        st = section_type(body)
-        if st == 'regex':
-            regex_blocks.append((comment, body))
-        elif st == 'domain':
-            domain_blocks.append((comment, body))
+        if firstCharacter == slashCharacter:
+            currentKind = regexKind
+        elif firstCharacter == pipeCharacter:
+            currentKind = domainKind
         else:
-            other_blocks.append((comment, body))
+            return otherKind
+            
+        if ruleKind == -1:
+            ruleKind = currentKind
+        elif ruleKind != currentKind:
+            return otherKind
+            
+    return otherKind if ruleKind == -1 else ruleKind
 
-    if SORT_SECTIONS:
-        regex_blocks.sort(key=lambda b: section_key(b[0]))
-        domain_blocks.sort(key=lambda b: section_key(b[0]))
-        other_blocks.sort(key=lambda b: section_key(b[0]))
 
-    # Title block (all '!' comments) stays on top; drop blank lines in it.
-    header_clean = [ln for ln in header if ln.strip()]
+def parseFileSections(memoryMap: mmap.mmap, fileSize: int) -> Tuple[List[Tuple[int, int]], List[section]]:
+    headerBoundaries: List[Tuple[int, int]] = []
+    sectionCollection: List[section] = []
+    
+    currentHeader: bytes = emptyBytes
+    currentKey: bytes = emptyBytes
+    currentBody: List[Tuple[int, int]] = []
+    sectionExists = False
+    
+    addRuleBoundary = currentBody.append
+    findNewline = memoryMap.find
+    
+    currentPosition = 0
+    while currentPosition < fileSize:
+        newlinePosition = findNewline(newlineBytes, currentPosition, fileSize)
+        if newlinePosition < 0:
+            newlinePosition = fileSize
+            
+        sectionBoundaries = extractSectionInner(memoryMap, currentPosition, newlinePosition)
+        if sectionBoundaries is not None:
+            if sectionExists:
+                sectionCollection.append(
+                    section(
+                        currentHeader,
+                        currentKey,
+                        currentBody,
+                        classifySectionRules(memoryMap, currentBody),
+                    )
+                )
+            headerStart, headerEnd = stripBoundaries(memoryMap, currentPosition, newlinePosition)
+            innerStart, innerEnd = sectionBoundaries
+            currentHeader = memoryMap[headerStart:headerEnd]
+            currentKey = memoryMap[innerStart:innerEnd].lower()
+            currentBody = []
+            addRuleBoundary = currentBody.append
+            sectionExists = True
+        elif not sectionExists:
+            headerStart, headerEnd = stripBoundaries(memoryMap, currentPosition, newlinePosition)
+            if headerEnd > headerStart:
+                headerBoundaries.append((headerStart, headerEnd))
+        else:
+            headerStart, headerEnd = stripBoundaries(memoryMap, currentPosition, newlinePosition)
+            if headerEnd > headerStart:
+                addRuleBoundary((headerStart, headerEnd))
+                
+        currentPosition = newlinePosition + 1
+        
+    if sectionExists:
+        sectionCollection.append(
+            section(
+                currentHeader,
+                currentKey,
+                currentBody,
+                classifySectionRules(memoryMap, currentBody),
+            )
+        )
+        
+    return headerBoundaries, sectionCollection
 
-    out = []
-    out.extend(header_clean)
 
-    # Regex rules always come first, right after the title.
-    for group in (regex_blocks, domain_blocks, other_blocks):
-        for comment, body in group:
-            if out and out[-1] != "":
-                out.append("")
-            out.append(comment)
-            out.extend(sort_body(body))
+def generateSectionSortKey(sectionEntity: section) -> Tuple[int, bytes]:
+    return (sectionEntity.ruleKind, sectionEntity.sortKey)
 
-    # Overwrite the source file in place.
-    INPUT_FILE.write_text("\n".join(out) + "\n", encoding="utf-8")
-    print(f"Done. Sorted in place: {INPUT_FILE}")
+
+def prepareOutputSections(memoryMap: mmap.mmap, sectionCollection: List[section]) -> None:
+    sectionCollection.sort(key=generateSectionSortKey)
+
+    def generateRuleSortKey(ruleBoundary: Tuple[int, int]) -> bytes:
+        return generateRuleKey(memoryMap, ruleBoundary[0], ruleBoundary[1])
+
+    for sectionEntity in sectionCollection:
+        sectionEntity.ruleBoundaries.sort(key=generateRuleSortKey)
+
+
+def iterateOutputChunks(
+    memoryMap: mmap.mmap,
+    headerBoundaries: List[Tuple[int, int]],
+    sectionCollection: List[section],
+) -> Iterator[bytes]:
+    contentWritten = False
+    for chunkStart, chunkEnd in headerBoundaries:
+        yield memoryMap[chunkStart:chunkEnd]
+        contentWritten = True
+        
+    for sectionEntity in sectionCollection:
+        if contentWritten:
+            yield emptyBytes
+        yield sectionEntity.headerText
+        contentWritten = True
+        
+        for ruleStart, ruleEnd in sectionEntity.ruleBoundaries:
+            yield normalizeDenyallowPayload(memoryMap, ruleStart, ruleEnd)
+        contentWritten = True
+
+
+def writeTemporaryFile(targetPath: Path, outputChunks: Iterator[bytes]) -> Path:
+    temporaryPath = targetPath.with_name(targetPath.name + temporaryFileSuffix)
+    fileDescriptor = -1
+    try:
+        fileDescriptor = os.open(str(temporaryPath), os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o644)
+        writeBuffer = bytearray(batchSize)
+        bufferView = memoryview(writeBuffer)
+        occupiedSpace = 0
+        bufferLimit = batchSize
+        
+        try:
+            for currentChunk in outputChunks:
+                chunkLength = len(currentChunk)
+                if occupiedSpace + chunkLength + 1 > bufferLimit:
+                    if occupiedSpace:
+                        os.write(fileDescriptor, bufferView[:occupiedSpace])
+                    occupiedSpace = 0
+                if chunkLength + 1 > bufferLimit:
+                    os.write(fileDescriptor, currentChunk)
+                    os.write(fileDescriptor, newlineBytes)
+                    continue
+                    
+                writeBuffer[occupiedSpace:occupiedSpace + chunkLength] = currentChunk
+                occupiedSpace += chunkLength
+                writeBuffer[occupiedSpace] = lineFeedCharacter
+                occupiedSpace += 1
+                
+            if occupiedSpace:
+                os.write(fileDescriptor, bufferView[:occupiedSpace])
+            os.fsync(fileDescriptor)
+        finally:
+            bufferView.release()
+            os.close(fileDescriptor)
+            fileDescriptor = -1
+            
+        return temporaryPath
+    except BaseException:
+        if fileDescriptor >= 0:
+            os.close(fileDescriptor)
+        try:
+            os.unlink(str(temporaryPath))
+        except OSError:
+            pass
+        raise
+
+
+def commitTemporaryFile(targetPath: Path, temporaryPath: Path) -> None:
+    try:
+        os.replace(str(temporaryPath), str(targetPath))
+    except BaseException:
+        try:
+            os.unlink(str(temporaryPath))
+        except OSError:
+            pass
+        raise
+
+
+def main() -> int:
+    if not inputFilePath.is_file():
+        print(f"Error: The file '{inputFilePath}' was not found.")
+        print("Make sure 'bogachenkoDNSFL.txt' is in the project root.")
+        return 1
+        
+    temporaryPath: Optional[Path] = None
+    try:
+        # FIX: Windows блокирует mmap-файлы. Мы должны закрыть mmap ПЕРЕД заменой файла.
+        with mappedFile(inputFilePath) as mappedFileInstance:
+            memoryMap = mappedFileInstance.getMap()
+            if memoryMap is None:
+                temporaryPath = writeTemporaryFile(inputFilePath, iter(()))
+            else:
+                headerBoundaries, sectionCollection = parseFileSections(memoryMap, mappedFileInstance.fileSize)
+                prepareOutputSections(memoryMap, sectionCollection)
+                temporaryPath = writeTemporaryFile(inputFilePath, iterateOutputChunks(memoryMap, headerBoundaries, sectionCollection))
+        
+        # Блок 'with' завершился, mmap закрыт, файл разблокирован. Теперь можно безопасно заменять.
+        if temporaryPath is not None:
+            commitTemporaryFile(inputFilePath, temporaryPath)
+            temporaryPath = None
+            
+    except OSError as exc:
+        print(f"Error: {exc}")
+        if temporaryPath is not None:
+            try:
+                os.unlink(str(temporaryPath))
+            except OSError:
+                pass
+        return -1
+        
+    print(f"Done. Sorted in place: {inputFilePath}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
