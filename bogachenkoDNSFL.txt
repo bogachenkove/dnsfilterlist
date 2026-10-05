@@ -19,6 +19,7 @@
 # [generic analytics domain rules]
 /^(?:.*?[_.-])?[a-z]{1,3}metric[as][_.-]/
 /^(?:.*?[_.-])?analyt(?:ic[as]?|ical)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?beacons?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?count(ers?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?diagnos(?:is|ti[ck][sa]?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?log(?:[syx]|g(?:ers?|ing))?\d*(?:[_.-]|$)/
@@ -28,7 +29,6 @@
 /^(?:.*?[_.-])?stat(?:isti[ck]a|s)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?telemetr(?:y|ia|ic[as]?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?tra?ck(?:e[sr]|ing)?\d*(?:[_.-]|$)/$denyallow=track24.ru
-/^(?:.*?[_.-])?beacons?\d*(?:[_.-]|$)/
 /^pi?x(el)?\d*[_.-]/$denyallow=phncdn.com
 
 # [generic trash domain rules]
@@ -68,6 +68,9 @@
 
 # [acdcdn.com]
 ||acdcdn.com^
+
+# [acint.net]
+||acint.net^
 
 # [acobt.tech]
 ||acobt.tech^
@@ -198,6 +201,9 @@
 # [adriver.ru]
 ||adriver.ru^
 
+# [adroll.com]
+||adroll.com^
+
 # [adrta.com]
 ||adrta.com^
 
@@ -230,6 +236,9 @@
 
 # [adsniper.ru]
 ||adsniper.ru^
+
+# [adsrvr.org]
+||adsrvr.org^
 
 # [adsterra.com]
 ||adsterra.com^
@@ -275,6 +284,9 @@
 
 # [aisiteanalytics.com]
 ||aisiteanalytics.com^
+
+# [alfasense.com]
+||alfasense.com^
 
 # [alibaba.com]
 ||tdum.alibaba.com^
@@ -389,12 +401,21 @@
 # [bidster.net]
 ||bidster.net^
 
+# [bidswitch.net]
+||bidswitch.net^
+
+# [bidvol.com]
+||bidvol.com^
+
 # [bing.com]
 ||bat.bing.com^
 ||c.bing.com^
 
 # [blueduckredapple.com]
 ||blueduckredapple.com^
+
+# [bluekai.com]
+||bluekai.com^
 
 # [bluetrafficstream.com]
 ||bluetrafficstream.com^
@@ -410,6 +431,9 @@
 
 # [bridgertb.tech]
 ||bridgertb.tech^
+
+# [browser-intake-datadoghq.com]
+||browser-intake-datadoghq.com^
 
 # [btloader.com]
 ||btloader.com^
@@ -429,6 +453,9 @@
 # [bvtpk.com]
 ||bvtpk.com^
 
+# [byteoversea.com]
+||mon.byteoversea.com^
+
 # [calltouch.ru]
 ||calltouch.ru^
 
@@ -441,6 +468,9 @@
 # [cdn-fc.com]
 ||cdn-fc.com^
 
+# [chartboost.com]
+||chartboost.com^
+
 # [chernomaza.link]
 ||chernomaza.link^
 
@@ -452,6 +482,9 @@
 
 # [clarity.ms]
 ||clarity.ms^
+
+# [clickadu.com]
+||clickadu.com^
 
 # [clicktale.net]
 ||clicktale.net^
@@ -474,11 +507,20 @@
 # [confiant-integrations.net]
 ||confiant-integrations.net^
 
+# [contextweb.com]
+||contextweb.com^
+
 # [cosedcost.com]
 ||cosedcost.com^
 
 # [crashlytics.com]
 ||crashlytics.com^
+
+# [criteo.com]
+||criteo.com^
+
+# [crwdcntrl.net]
+||crwdcntrl.net^
 
 # [ctraffic.io]
 ||ctraffic.io^
@@ -528,6 +570,9 @@
 # [doubleclick.net]
 ||doubleclick.net^
 
+# [doubleverify.com]
+||doubleverify.com^
+
 # [drimquop.com]
 ||drimquop.com^
 
@@ -562,6 +607,12 @@
 # [everestop.io]
 ||everestop.io^
 
+# [everesttech.net]
+||everesttech.net^
+
+# [evergage.com]
+||evergage.com^
+
 # [exoclick.com]
 ||exoclick.com^
 
@@ -586,6 +637,12 @@
 # [fineboost.com]
 ||fineboost.com^
 
+# [fingerprint.com]
+||fingerprint.com^
+
+# [fingerprintjs.com]
+||fingerprintjs.com^
+
 # [firefox.com]
 ||pa.firefox.com^
 
@@ -601,11 +658,20 @@
 # [fontmenice.com]
 ||fontmenice.com^
 
+# [fpjs.io]
+||fpjs.io^
+
 # [franecki.net]
 ||franecki.net^
 
 # [freshmarketer.com]
 ||freshmarketer.com^
+
+# [fullstory.com]
+||fullstory.com^
+
+# [fyber.com]
+||fyber.com^
 
 # [gameanalytics.com]
 ||gameanalytics.com^
@@ -624,6 +690,9 @@
 
 # [github.io]
 ||weblion777.github.io^
+
+# [gnezdo.ru]
+||gnezdo.ru^
 
 # [go-mpulse.net]
 ||go-mpulse.net^
@@ -697,8 +766,14 @@
 # [gsrv.dev]
 ||gsrv.dev^
 
+# [gumgum.com]
+||gumgum.com^
+
 # [hdacode.com]
 ||hdacode.com^
+
+# [heapanalytics.com]
+||heapanalytics.com^
 
 # [hicloud.com]
 ||logbak.hicloud.com^
@@ -721,8 +796,14 @@
 # [hotjar.io]
 ||hotjar.io^
 
+# [hybrid.ai]
+||hybrid.ai^
+
 # [hypelab.com]
 ||hypelab.com^
+
+# [id5-sync.com]
+||id5-sync.com^
 
 # [iloptrex.com]
 ||iloptrex.com^
@@ -746,11 +827,29 @@
 # [inner-active.mobi]
 ||inner-active.mobi^
 
+# [insightexpressai.com]
+||insightexpressai.com^
+
+# [ironsource.mobi]
+||ironsource.mobi^
+
 # [juicyads.com]
 ||juicyads.com^
 
 # [jyzkut.com]
 ||jyzkut.com^
+
+# [kargo.com]
+||kargo.com^
+
+# [kimberlite.io]
+||kimberlite.io^
+
+# [kochava.com]
+||kochava.com^
+
+# [licdn.com]
+||snap.licdn.com^
 
 # [liftoff-creatives.io]
 ||liftoff-creatives.io^
@@ -758,11 +857,20 @@
 # [liftoff.io^]
 ||liftoff.io^
 
+# [live.com]
+||g.live.com^
+
 # [llvpn.com]
 ||llvpn.com^
 
 # [luckyorange.com]
 ||luckyorange.com^
+
+# [luckyorange.net]
+||luckyorange.net^
+
+# [luxcdn.com]
+||luxcdn.com^
 
 # [maginp.com]
 ||maginp.com^
@@ -785,6 +893,9 @@
 ||trk.mail.ru^
 ||xray.mail.ru^
 
+# [mathtag.com]
+||mathtag.com^
+
 # [maticooads.com]
 ||maticooads.com^
 
@@ -803,13 +914,16 @@
 # [metricswpsh.com]
 ||metricswpsh.com^
 
+# [mgid.com]
+||mgid.com^
+
 # [mhverifier.ru]
 ||mhverifier.ru^
 
 # [microsoft.com]
+||bingads.microsoft.com^
 ||data.microsoft.com^
 ||pipe.aria.microsoft.com^
-||bingads.microsoft.com^
 
 # [mindbox.ru]
 ||mindbox.ru^
@@ -823,6 +937,9 @@
 
 # [mobtop.com]
 ||mobtop.com^
+
+# [moe.video]
+||moe.video^
 
 # [moloco.com]
 ||moloco.com^
@@ -867,11 +984,17 @@
 # [news-headlines.co]
 ||news-headlines.co^
 
+# [nr-data.net]
+||nr-data.net^
+
 # [octo25.me]
 ||octo25.me^
 
 # [octotracking.com]
 ||octotracking.com^
+
+# [ohmy.bid]
+||ohmy.bid^
 
 # [ok.ru]
 ||ms.ok.ru^
@@ -882,8 +1005,14 @@
 # [onelink.me]
 ||onelink.me^
 
+# [onetag-sys.com]
+||onetag-sys.com^
+
 # [openfpcdn.io]
 ||openfpcdn.io^
+
+# [openx.net]
+||openx.net^
 
 # [opera.com]
 ||af.opera.com^
@@ -891,6 +1020,12 @@
 
 # [otm-r.com]
 ||otm-r.com^
+
+# [outbrain.com]
+||outbrain.com^
+
+# [pangleglobal.com]
+||pangleglobal.com^
 
 # [pemsrv.com]
 ||pemsrv.com^
@@ -904,17 +1039,32 @@
 # [perfdrive.com]
 ||perfdrive.com^
 
+# [permutive.com]
+||permutive.com^
+
 # [phgop1.com]
 ||phgop1.com^
 
 # [pinterest.com]
 ||ct.pinterest.com^
 
+# [pippio.com]
+||pippio.com^
+
 # [poloptrex.com]
 ||poloptrex.com^
 
 # [pomyaniubogogo.link]
 ||pomyaniubogogo.link^
+
+# [popcash.net]
+||popcash.net^
+
+# [popmyads.com]
+||popmyads.com^
+
+# [posthog.com]
+||posthog.com^
 
 # [prebid-server.com]
 ||prebid-server.com^
@@ -925,14 +1075,26 @@
 # [profitableratecpm.com]
 ||profitableratecpm.com^
 
+# [propellerads.com]
+||propellerads.com^
+
+# [propellerclick.com]
+||propellerclick.com^
+
 # [ptinusmufasal.com]
 ||ptinusmufasal.com^
+
+# [pubmatic.com]
+||pubmatic.com^
 
 # [punchmedia.ru]
 ||punchmedia.ru^
 
 # [pushwoosh.com]
 ||pushwoosh.com^
+
+# [quantcast.com]
+||quantcast.com^
 
 # [quantserve.com]
 ||quantserve.com^
@@ -947,6 +1109,9 @@
 # [retagro.com]
 ||retagro.com^
 
+# [rlcdn.com]
+||rlcdn.com^
+
 # [roistat.com]
 ||roistat.com^
 
@@ -955,6 +1120,9 @@
 
 # [rstprgapipt.com]
 ||rstprgapipt.com^
+
+# [rubiconproject.com]
+||rubiconproject.com^
 
 # [rugfrfji.win]
 ||rugfrfji.win^
@@ -973,6 +1141,9 @@
 # [samsungads.com]
 ||samsungads.com^
 
+# [sape.ru]
+||sape.ru^
+
 # [sberbank.ru]
 ||bfds.sberbank.ru^
 ||clickstream.sberbank.ru^
@@ -983,6 +1154,12 @@
 
 # [scorecardresearch.com]
 ||scorecardresearch.com^
+
+# [segment.com]
+||segment.com^
+
+# [segment.io]
+||segment.io^
 
 # [sentry-cdn.com]
 ||sentry-cdn.com^
@@ -999,6 +1176,12 @@
 # [serving-sys.ru]
 ||serving-sys.ru^
 
+# [sharethrough.com]
+||sharethrough.com^
+
+# [siftscience.com]
+||siftscience.com^
+
 # [simplejsmenu.com]
 ||simplejsmenu.com^
 
@@ -1008,8 +1191,17 @@
 # [skcrtxr.com]
 ||skcrtxr.com^
 
+# [smartyads.com]
+||smartyads.com^
+
+# [snowplow.io]
+||snowplow.io^
+
 # [sonicsads.com]
 ||sonicsads.com^
+
+# [sonobi.com]
+||sonobi.com^
 
 # [sorrybizzy.xyz]
 ||sorrybizzy.xyz^
@@ -1017,11 +1209,20 @@
 # [spotify.com]
 ||aet.spotify.com^
 
+# [spotxchange.com]
+||spotxchange.com^
+
+# [stackadapt.com]
+||stackadapt.com^
+
 # [startappservice.com]
 ||startappservice.com^
 
 # [statad.ru]
 ||statad.ru^
+
+# [statdynamic.com]
+||statdynamic.com^
 
 # [staticapi.org]
 ||staticapi.org^
@@ -1029,8 +1230,17 @@
 # [stbid.ru]
 ||stbid.ru^
 
+# [stickyadstv.com]
+||stickyadstv.com^
+
 # [stmtag.ru]
 ||stmtag.ru^
+
+# [supersonicads.com]
+||supersonicads.com^
+
+# [taboola.com]
+||taboola.com^
 
 # [tagcommander.com]
 ||tagcommander.com^
@@ -1058,6 +1268,9 @@
 
 # [targetads.io]
 ||targetads.io^
+
+# [teads.tv]
+||teads.tv^
 
 # [telecid.ru]
 ||telecid.ru^
@@ -1124,6 +1337,9 @@
 # [twitch.tv]
 ||spade.twitch.tv^
 
+# [uidapi.com]
+||uidapi.com^
+
 # [umeng.com]
 ||umeng.com^
 
@@ -1143,6 +1359,9 @@
 
 # [usrpubtrk.com]
 ||usrpubtrk.com^
+
+# [utraff.com]
+||utraff.com^
 
 # [uxfeedback.ru]
 ||uxfeedback.ru^
@@ -1243,6 +1462,9 @@
 # [wortise.com]
 ||wortise.com^
 
+# [wzrkt.com]
+||wzrkt.com^
+
 # [x3m.biz]
 ||x3m.biz^
 
@@ -1255,6 +1477,10 @@
 
 # [yadro.ru]
 ||yadro.ru^
+
+# [yahoo.com]
+||udc.yahoo.com^
+||udcm.yahoo.com^
 
 # [yandex-net.ru]
 ||startup-mobile.ap.yandex-net.ru^
@@ -1340,12 +1566,12 @@
 ||yabs.yandex.md^
 
 # [yandex.net]
-||appmetrica.yandex.net^
-||extmaps-api.yandex.net^
 ||abt.s3.yandex.net^
+||appmetrica.yandex.net^
 ||browser-updater.yandex.net^
 ||csp.yandex.net^
 ||events.plus.yandex.net^
+||extmaps-api.yandex.net^
 ||offerwall.yandex.net^
 ||startup.mobile.yandex.net^
 ||static-mon.yandex.net^
@@ -1396,235 +1622,3 @@
 
 # [zog.link]
 ||zog.link^
-
-# [byteoversea.com]
-||mon.byteoversea.com^
-
-# [licdn.com]
-||snap.licdn.com^
-
-# [statdynamic.com]
-||statdynamic.com^
-
-# [clickadu.com]
-||clickadu.com^
-
-# [popmyads.com]
-||popmyads.com^
-
-# [popcash.net]
-||popcash.net^
-
-# [browser-intake-datadoghq.com]
-||browser-intake-datadoghq.com^
-
-# [nr-data.net]
-||nr-data.net^
-
-# [kochava.com]
-||kochava.com^
-
-# [wzrkt.com]
-||wzrkt.com^
-
-# [rlcdn.com]
-||rlcdn.com^
-
-# [fingerprint.com]
-||fingerprint.com^
-
-# [fingerprintjs.com]
-||fingerprintjs.com^
-
-# [crwdcntrl.net]
-||crwdcntrl.net^
-
-# [posthog.com]
-||posthog.com^
-
-# [snowplow.io]
-||snowplow.io^
-
-# [uidapi.com]
-||uidapi.com^
-
-# [everesttech.net]
-||everesttech.net^
-
-# [bidswitch.net]
-||bidswitch.net^
-
-# [mathtag.com]
-||mathtag.com^
-
-# [id5-sync.com]
-||id5-sync.com^
-
-# [onetag-sys.com]
-||onetag-sys.com^
-
-# [pippio.com]
-||pippio.com^
-
-# [bluekai.com]
-||bluekai.com^
-
-# [permutive.com]
-||permutive.com^
-
-# [siftscience.com]
-||siftscience.com^
-
-# [fpjs.io]
-||fpjs.io^
-
-# [quantcast.com]
-||quantcast.com^
-
-# [fullstory.com]
-||fullstory.com^
-
-# [segment.io]
-||segment.io^
-
-# [segment.com]
-||segment.com^
-
-# [pangleglobal.com]
-||pangleglobal.com^
-
-# [heapanalytics.com]
-||heapanalytics.com^
-
-# [luckyorange.net]
-||luckyorange.net^
-
-# [adroll.com]
-||adroll.com^
-
-# [sonobi.com]
-||sonobi.com^
-
-# [insightexpressai.com]
-||insightexpressai.com^
-
-# [doubleverify.com]
-||doubleverify.com^
-
-# [adsafeprotected.com]
-||adsafeprotected.com^
-
-# [ironsource.mobi]
-||ironsource.mobi^
-
-# [kargo.com]
-||kargo.com^
-
-# [teads.tv]
-||teads.tv^
-
-# [gumgum.com]
-||gumgum.com^
-
-# [sonobi.com]
-||sonobi.com^
-
-# [stickyadstv.com]
-||stickyadstv.com^
-
-# [stackadapt.com]
-||stackadapt.com^
-
-# [sharethrough.com]
-||sharethrough.com^
-
-# [contextweb.com]
-||contextweb.com^
-
-# [smartyads.com]
-||smartyads.com^
-
-# [adsrvr.org]
-||adsrvr.org^
-
-# [supersonicads.com]
-||supersonicads.com^
-
-# [fyber.com]
-||fyber.com^
-
-# [chartboost.com]
-||chartboost.com^
-
-# [yahoo.com]
-||udcm.yahoo.com^
-||udc.yahoo.com^
-
-# [spotxchange.com]
-||spotxchange.com^
-
-# [rubiconproject.com]
-||rubiconproject.com^
-
-# [openx.net]
-||openx.net^
-
-# [pubmatic.com]
-||pubmatic.com^
-
-# [outbrain.com]
-||outbrain.com^
-
-# [propellerclick.com]
-||propellerclick.com^
-
-# [propellerads.com]
-||propellerads.com^
-
-# [mgid.com]
-||mgid.com^
-
-# [taboola.com]
-||taboola.com^
-
-# [criteo.com]
-||criteo.com^
-
-# [evergage.com]
-||evergage.com^
-
-# [live.com]
-||g.live.com^
-
-# [luxcdn.com]
-||luxcdn.com^
-
-# [alfasense.com]
-||alfasense.com^
-
-# [utraff.com]
-||utraff.com^
-
-# [hybrid.ai]
-||hybrid.ai^
-
-# [gnezdo.ru]
-||gnezdo.ru^
-
-# [bidvol.com]
-||bidvol.com^
-
-# [ohmy.bid]
-||ohmy.bid^
-
-# [acint.net]
-||acint.net^
-
-# [kimberlite.io]
-||kimberlite.io^
-
-# [sape.ru]
-||sape.ru^
-
-# [moe.video]
-||moe.video^
