@@ -5,6 +5,7 @@
 ! License: https://raw.githubusercontent.com/bogachenkove/dnsfilterlist/master/LICENSE
 
 # [generic ads domain rules]
+!/^(?:.*?[_.-])?ad(tech|view|media|click|sys(tem)?|net(work)?|traffic|track|log|link)\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?ad(?:[svx]|fs|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?adse?r(?:v(?:ices?|ers?|ing|e|r)?|s)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
@@ -333,6 +334,7 @@
 # [apple.com]
 ||iad.apple.com^
 ||iadsdk.apple.com^
+||xp.apple.com^
 
 # [applift.com]
 ||applift.com^
@@ -519,6 +521,9 @@
 # [criteo.com]
 ||criteo.com^
 
+# [criteo.net]
+||criteo.net^
+
 # [crwdcntrl.net]
 ||crwdcntrl.net^
 
@@ -527,6 +532,9 @@
 
 # [culturaltracking.ru]
 ||culturaltracking.ru^
+
+# [customer.io]
+||customer.io^
 
 # [datago.ru]
 ||datago.ru^
@@ -630,6 +638,7 @@
 
 # [fbcdn.net]
 ||xy.fbcdn.net^
+||xz.fbcdn.net^
 
 # [fh-wgt.com]
 ||fh-wgt.com^
@@ -848,6 +857,9 @@
 # [kochava.com]
 ||kochava.com^
 
+# [lgsmartad.com]
+||lgsmartad.com^
+
 # [licdn.com]
 ||snap.licdn.com^
 
@@ -921,6 +933,7 @@
 ||mhverifier.ru^
 
 # [microsoft.com]
+||adsdk.microsoft.com^
 ||bingads.microsoft.com^
 ||data.microsoft.com^
 ||pipe.aria.microsoft.com^
@@ -957,8 +970,8 @@
 ||mrdmca.com^
 
 # [msn.com]
-||browser.events.data.msn.com^
 ||c.msn.com^
+||data.msn.com^
 ||g.msn.com^
 ||srtb.msn.com^
 
@@ -1057,6 +1070,9 @@
 # [pomyaniubogogo.link]
 ||pomyaniubogogo.link^
 
+# [popads.net]
+||popads.net^
+
 # [popcash.net]
 ||popcash.net^
 
@@ -1105,6 +1121,16 @@
 # [rambler.ru]
 ||rcmjs.rambler.ru^
 ||ssp.rambler.ru^
+
+# [reddit.com]
+||d.reddit.com^
+||events.reddit.com^
+
+# [redditmedia.com]
+||events.redditmedia.com^
+
+# [refersion.com]
+||refersion.com^
 
 # [retagro.com]
 ||retagro.com^
@@ -1190,6 +1216,9 @@
 
 # [skcrtxr.com]
 ||skcrtxr.com^
+
+# [skimresources.com]
+||skimresources.com^
 
 # [smartyads.com]
 ||smartyads.com^
@@ -1380,6 +1409,9 @@
 
 # [videoroll.net]
 ||videoroll.net^
+
+# [viglink.com]
+||viglink.com^
 
 # [viously.com]
 ||viously.com^
