@@ -5,15 +5,26 @@
 ! License: https://raw.githubusercontent.com/bogachenkove/dnsfilterlist/master/LICENSE
 
 # [generic ads domain rules]
-!/^(?:.*?[_.-])?ad(tech|view|media|click|sys(tem)?|net(work)?|traffic|track|log|link)\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adtech\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adview\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?admedia\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adcli?ck\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adsys(tem)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adnet(work)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adtraff?ic\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adlog\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adlink\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adtrack\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?ad(?:[svx]|fs|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?adse?r(?:v(?:ices?|ers?|ing|e|r)?|s)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?monetiz(?:e|ation|ing|a[ts]ia)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?commercial\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?preroll\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?recomm?end(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?rekl?(ama?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?teasers?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?sponsor(?:s|ing)\d*(?:[_.-]|$)/
 /^v(ast|paid)[_.-]/
 
@@ -1455,6 +1466,7 @@
 
 # [wb.ru]
 ||a.wb.ru^
+||acollector.wb.ru^
 
 # [weborama-tech.ru]
 ||weborama-tech.ru^
@@ -1654,3 +1666,6 @@
 
 # [zog.link]
 ||zog.link^
+
+# [gemius.pl]
+||gemius.pl^
