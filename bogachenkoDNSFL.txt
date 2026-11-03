@@ -1170,7 +1170,9 @@
 # [rutube.ru]
 ||a.rutube.ru^
 ||ac.rutube.ru^
+||ssp.rutube.ru^
 ||goya.rutube.ru^
+||yast.rutube.ru^
 
 # [samsungadhub.com]
 ||samsungadhub.com^
@@ -1669,3 +1671,18 @@
 
 # [gemius.pl]
 ||gemius.pl^
+
+# [gpm-ssp.ru]
+||gpm-ssp.ru^
+
+# [zvuk.com]
+||alloy-web.zvuk.com^
+
+# [traffmovie.com]
+||traffmovie.com^
+
+# [mtgglobals.com]
+||mtgglobals.com^
+
+# [rayjump.com]
+||rayjump.com^
