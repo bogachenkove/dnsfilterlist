@@ -1621,6 +1621,7 @@
 ||offerwall.yandex.net^
 ||startup.mobile.yandex.net^
 ||static-mon.yandex.net^
+||hdrc.yandex.net^
 
 # [yandex.ru]
 ||adfox.yandex.ru^
@@ -1638,6 +1639,7 @@
 ||statchecker.yandex.ru^
 ||uaas.yandex.ru^
 ||yabs.yandex.ru^
+||surveys.yandex.ru^
 
 # [yandex.tj]
 ||an.yandex.tj^
@@ -1686,3 +1688,24 @@
 
 # [rayjump.com]
 ||rayjump.com^
+
+# [cdek.ru]
+||supersentry.cdek.ru^
+
+# [expf.ru]
+||expf.ru^
+
+# [metriccca.ru]
+||metriccca.ru^
+
+# [sbermarketing.ru]
+||sbermarketing.ru^
+
+# [theguardian.com]
+||ophan.theguardian.com^
+
+# [itv.com]
+||cpt.itv.com^
+
+# [bngwlt.com]
+||bngwlt.com^
