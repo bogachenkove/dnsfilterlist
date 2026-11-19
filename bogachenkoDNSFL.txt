@@ -985,6 +985,7 @@
 ||data.msn.com^
 ||g.msn.com^
 ||srtb.msn.com^
+||arc.msn.com^
 
 # [mts.ru]
 ||a.mts.ru^
@@ -1438,6 +1439,7 @@
 
 # [vk.com]
 ||ms.vk.com^
+||ms.*.vk.com^
 
 # [vk.ru]
 ||ms.vk.ru^
@@ -1564,6 +1566,7 @@
 ||statchecker.yandex.com^
 ||uaas.yandex.com^
 ||yabs.yandex.com^
+||appmetrica.yandex.com^
 
 # [yandex.com.tr]
 ||adfox.yandex.com.tr^
@@ -1709,3 +1712,12 @@
 
 # [bngwlt.com]
 ||bngwlt.com^
+
+# [ufouxbwn.com]
+||ufouxbwn.com^
+
+# [traffer.net]
+||traffer.net^
+
+# [get4click.ru]
+||get4click.ru^
