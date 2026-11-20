@@ -45,7 +45,7 @@
 
 # [generic trash domain rules]
 /^(?:.*?[_.-])?agl0[0-9]{2}\.(bid|online|com|tech|host|pro|fun|shop|site|art)$/
-/^(?:.*?[_.-])?ajx?[0-9]{3,4}\.(bid|online|xyz)$/
+/^(?:.*?[_.-])?ajx?[0-9]{3,4}\.(bid|online|xyz|top)$/
 /^(?:.*?[_.-])?n[0-9]{2,4}adserv\.(com|xyz)$/
 /^(?:.*?[_.-])?srvd?[0-9]{3,4}\.com$/
 /^[a-z_-]{3,15}\.[a-f0-9]{32}\.[a-z]{2,3}$/
@@ -1721,3 +1721,15 @@
 
 # [get4click.ru]
 ||get4click.ru^
+
+# [ipvertnet.com]
+||ipvertnet.com^
+
+# [21wiz.com]
+||21wiz.com^
+
+# [bracdn.online]
+||bracdn.online^
+
+# [moviead55.ru]
+||moviead55.ru^
