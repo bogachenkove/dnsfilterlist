@@ -600,6 +600,7 @@
 
 # [dzen.ru]
 ||ms.dzen.ru^
+||rum.dzen.ru^
 
 # [ebacdn.com]
 ||as.ebacdn.com^
@@ -1043,8 +1044,20 @@
 ||af.opera.com^
 ||op-mobile.opera.com^
 
+# [openai.com]
+||bzrcdn.openai.com^
+
+# [opera-api.com]
+||merchandise.opera-api.com^
+
+# [opera-api2.com]
+||merchandise.opera-api2.com^
+
 # [otm-r.com]
 ||otm-r.com^
+
+# [otm-r.ru]
+||otm-r.ru^
 
 # [outbrain.com]
 ||outbrain.com^
@@ -1616,6 +1629,8 @@
 
 # [yandex.net]
 ||abt.s3.yandex.net^
+||dr.yandex.net^
+||dr2.yandex.net^
 ||appmetrica.yandex.net^
 ||browser-updater.yandex.net^
 ||csp.yandex.net^
@@ -1733,3 +1748,30 @@
 
 # [moviead55.ru]
 ||moviead55.ru^
+
+# [imgsniper.com]
+||imgsniper.com^
+
+# [wavesend.ru]
+||wavesend.ru^
+
+# [actionpay.ru]
+||actionpay.ru^
+
+# [bannerhost.ru]
+||bannerhost.ru^
+
+# [adtec.ru]
+||adtec.ru^
+
+# [ttarget.ru]
+||ttarget.ru^
+
+# [videonow.ru]
+||videonow.ru^
+
+# [html-load.cc]
+||html-load.cc^
+
+# [survicate.com]
+||survicate.com^
