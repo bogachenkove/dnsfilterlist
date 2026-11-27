@@ -1775,3 +1775,21 @@
 
 # [survicate.com]
 ||survicate.com^
+
+# [tikhomira.link]
+||tikhomira.link^
+
+# [rstprgapipt.com]
+||rstprgapipt.com^
+
+# [zimoyzharko.org]
+||zimoyzharko.org^
+
+# [cxsqmfmb.com]
+||cxsqmfmb.com^
+
+# [onvmu.com]
+||onvmu.com^
+
+# [network-lc.ru]
+||network-lc.ru^
