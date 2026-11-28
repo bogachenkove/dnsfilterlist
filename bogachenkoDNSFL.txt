@@ -5,27 +5,27 @@
 ! License: https://raw.githubusercontent.com/bogachenkove/dnsfilterlist/master/LICENSE
 
 # [generic ads domain rules]
-/^(?:.*?[_.-])?adtech\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adview\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?admedia\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adcli?ck\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adsys(tem)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adnet(work)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adtraff?ic\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adlog\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adlink\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?adtrack\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?ad(?:[svx]|fs|vert(?:is(?:ing|ement)?|ing)?)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adcli?ck\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adlink\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adlog\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?admedia\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adnet(work)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?adse?r(?:v(?:ices?|ers?|ing|e|r)?|s)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adsys(tem)?\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adtech\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adtrack\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adtraff?ic\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?adview\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?bann?ers?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?monetiz(?:e|ation|ing|a[ts]ia)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?commercial\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?monetiz(?:e|ation|ing|a[ts]ia)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?preroll\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?promos?(t(ed?|i(ng|ons?)))?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?recomm?end(?:s|e[dr]|ation|ing)?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?rekl?(ama?)?\d*(?:[_.-]|$)/
-/^(?:.*?[_.-])?teasers?\d*(?:[_.-]|$)/
 /^(?:.*?[_.-])?sponsor(?:s|ing)\d*(?:[_.-]|$)/
+/^(?:.*?[_.-])?teasers?\d*(?:[_.-]|$)/
 /^v(ast|paid)[_.-]/
 
 # [generic analytics domain rules]
@@ -69,6 +69,9 @@
 # [5gvci.com]
 ||5gvci.com^
 
+# [85b6b2.ws]
+||85b6b2.ws^
+
 # [aatkit.com]
 ||aatkit.com^
 
@@ -89,6 +92,9 @@
 
 # [acscdn.com]
 ||acscdn.com^
+
+# [actionpay.ru]
+||actionpay.ru^
 
 # [activemetering.com]
 ||activemetering.com^
@@ -267,6 +273,9 @@
 # [adsximg.com]
 ||adsximg.com^
 
+# [adtec.ru]
+||adtec.ru^
+
 # [adtng.com]
 ||adtng.com^
 
@@ -402,6 +411,9 @@
 # [backtrace.io]
 ||backtrace.io^
 
+# [bannerhost.ru]
+||bannerhost.ru^
+
 # [betweendigital.com]
 ||betweendigital.com^
 
@@ -433,8 +445,14 @@
 # [bluetrafficstream.com]
 ||bluetrafficstream.com^
 
+# [bngwlt.com]
+||bngwlt.com^
+
 # [bonuscake.ru]
 ||bonuscake.ru^
+
+# [bracdn.online]
+||bracdn.online^
 
 # [branch.io]
 ||branch.io^
@@ -477,6 +495,9 @@
 
 # [caulireid.com]
 ||caulireid.com^
+
+# [cdek.ru]
+||supersentry.cdek.ru^
 
 # [cdn-fc.com]
 ||cdn-fc.com^
@@ -546,6 +567,9 @@
 
 # [customer.io]
 ||customer.io^
+
+# [cxsqmfmb.com]
+||cxsqmfmb.com^
 
 # [datago.ru]
 ||datago.ru^
@@ -639,6 +663,9 @@
 # [exp-tas.com]
 ||default.exp-tas.com^
 
+# [expf.ru]
+||expf.ru^
+
 # [facct.ru]
 ||facct.ru^
 
@@ -697,8 +724,14 @@
 # [gameanalytics.com]
 ||gameanalytics.com^
 
+# [gemius.pl]
+||gemius.pl^
+
 # [geoedge.be]
 ||geoedge.be^
+
+# [get4click.ru]
+||get4click.ru^
 
 # [getads.ru]
 ||getads.ru^
@@ -781,6 +814,9 @@
 # [googlevads-cn.com]
 ||googlevads-cn.com^
 
+# [gpm-ssp.ru]
+||gpm-ssp.ru^
+
 # [gpmdata.ru]
 ||gpmdata.ru^
 
@@ -817,6 +853,9 @@
 # [hotjar.io]
 ||hotjar.io^
 
+# [html-load.cc]
+||html-load.cc^
+
 # [hybrid.ai]
 ||hybrid.ai^
 
@@ -832,6 +871,9 @@
 # [imgsmail.ru]
 ||media-advcycle.imgsmail.ru^
 ||radar.imgsmail.ru^
+
+# [imgsniper.com]
+||imgsniper.com^
 
 # [impactradius-event.com]
 ||impactradius-event.com^
@@ -851,8 +893,14 @@
 # [insightexpressai.com]
 ||insightexpressai.com^
 
+# [ipvertnet.com]
+||ipvertnet.com^
+
 # [ironsource.mobi]
 ||ironsource.mobi^
+
+# [itv.com]
+||cpt.itv.com^
 
 # [juicyads.com]
 ||juicyads.com^
@@ -935,6 +983,9 @@
 # [mediation.goog]
 ||mediation.goog^
 
+# [metriccca.ru]
+||metriccca.ru^
+
 # [metricswpsh.com]
 ||metricswpsh.com^
 
@@ -975,6 +1026,9 @@
 # [mouseflow.com]
 ||mouseflow.com^
 
+# [moviead55.ru]
+||moviead55.ru^
+
 # [mradx.net]
 ||mradx.net^
 
@@ -982,11 +1036,14 @@
 ||mrdmca.com^
 
 # [msn.com]
+||arc.msn.com^
 ||c.msn.com^
 ||data.msn.com^
 ||g.msn.com^
 ||srtb.msn.com^
-||arc.msn.com^
+
+# [mtgglobals.com]
+||mtgglobals.com^
 
 # [mts.ru]
 ||a.mts.ru^
@@ -1003,6 +1060,9 @@
 
 # [nereserv.com]
 ||nereserv.com^
+
+# [network-lc.ru]
+||network-lc.ru^
 
 # [news-cdn.site]
 ||news-cdn.site^
@@ -1034,24 +1094,27 @@
 # [onetag-sys.com]
 ||onetag-sys.com^
 
+# [onvmu.com]
+||onvmu.com^
+
+# [openai.com]
+||bzrcdn.openai.com^
+
 # [openfpcdn.io]
 ||openfpcdn.io^
 
 # [openx.net]
 ||openx.net^
 
-# [opera.com]
-||af.opera.com^
-||op-mobile.opera.com^
-
-# [openai.com]
-||bzrcdn.openai.com^
-
 # [opera-api.com]
 ||merchandise.opera-api.com^
 
 # [opera-api2.com]
 ||merchandise.opera-api2.com^
+
+# [opera.com]
+||af.opera.com^
+||op-mobile.opera.com^
 
 # [otm-r.com]
 ||otm-r.com^
@@ -1147,6 +1210,9 @@
 ||rcmjs.rambler.ru^
 ||ssp.rambler.ru^
 
+# [rayjump.com]
+||rayjump.com^
+
 # [reddit.com]
 ||d.reddit.com^
 ||events.reddit.com^
@@ -1184,8 +1250,8 @@
 # [rutube.ru]
 ||a.rutube.ru^
 ||ac.rutube.ru^
-||ssp.rutube.ru^
 ||goya.rutube.ru^
+||ssp.rutube.ru^
 ||yast.rutube.ru^
 
 # [samsungadhub.com]
@@ -1201,6 +1267,9 @@
 ||bfds.sberbank.ru^
 ||clickstream.sberbank.ru^
 ||visor.sberbank.ru^
+
+# [sbermarketing.ru]
+||sbermarketing.ru^
 
 # [scdn.co]
 ||adstudio-assets.scdn.co^
@@ -1295,6 +1364,9 @@
 # [supersonicads.com]
 ||supersonicads.com^
 
+# [survicate.com]
+||survicate.com^
+
 # [taboola.com]
 ||taboola.com^
 
@@ -1340,6 +1412,12 @@
 # [thecatmachine.com]
 ||thecatmachine.com^
 
+# [theguardian.com]
+||ophan.theguardian.com^
+
+# [tikhomira.link]
+||tikhomira.link^
+
 # [tiktokpangle-b.us]
 ||api*-access-ttp*.tiktokpangle-b.us^
 
@@ -1375,6 +1453,9 @@
 # [traffaret.com]
 ||traffaret.com^
 
+# [traffer.net]
+||traffer.net^
+
 # [trafficbass.com]
 ||trafficbass.com^
 
@@ -1384,14 +1465,23 @@
 # [trafficjunky.net]
 ||trafficjunky.net^
 
+# [traffmovie.com]
+||traffmovie.com^
+
 # [tsyndicate.com]
 ||tsyndicate.com^
+
+# [ttarget.ru]
+||ttarget.ru^
 
 # [twinrdengine.com]
 ||twinrdengine.com^
 
 # [twitch.tv]
 ||spade.twitch.tv^
+
+# [ufouxbwn.com]
+||ufouxbwn.com^
 
 # [uidapi.com]
 ||uidapi.com^
@@ -1433,6 +1523,9 @@
 
 # [viadata.store]
 ||viadata.store^
+
+# [videonow.ru]
+||videonow.ru^
 
 # [videoroll.net]
 ||videoroll.net^
@@ -1480,6 +1573,9 @@
 
 # [waust.at]
 ||waust.at^
+
+# [wavesend.ru]
+||wavesend.ru^
 
 # [wb.ru]
 ||a.wb.ru^
@@ -1569,6 +1665,7 @@
 ||adsdk.yandex.com^
 ||amc.yandex.com^
 ||an.yandex.com^
+||appmetrica.yandex.com^
 ||awaps.yandex.com^
 ||bs-meta.yandex.com^
 ||bs-metadsp.yandex.com^
@@ -1579,7 +1676,6 @@
 ||statchecker.yandex.com^
 ||uaas.yandex.com^
 ||yabs.yandex.com^
-||appmetrica.yandex.com^
 
 # [yandex.com.tr]
 ||adfox.yandex.com.tr^
@@ -1629,17 +1725,17 @@
 
 # [yandex.net]
 ||abt.s3.yandex.net^
-||dr.yandex.net^
-||dr2.yandex.net^
 ||appmetrica.yandex.net^
 ||browser-updater.yandex.net^
 ||csp.yandex.net^
+||dr.yandex.net^
+||dr2.yandex.net^
 ||events.plus.yandex.net^
 ||extmaps-api.yandex.net^
+||hdrc.yandex.net^
 ||offerwall.yandex.net^
 ||startup.mobile.yandex.net^
 ||static-mon.yandex.net^
-||hdrc.yandex.net^
 
 # [yandex.ru]
 ||adfox.yandex.ru^
@@ -1655,9 +1751,9 @@
 ||market-baobab.yandex.ru^
 ||mc.yandex.ru^
 ||statchecker.yandex.ru^
+||surveys.yandex.ru^
 ||uaas.yandex.ru^
 ||yabs.yandex.ru^
-||surveys.yandex.ru^
 
 # [yandex.tj]
 ||an.yandex.tj^
@@ -1686,110 +1782,11 @@
 # [zcvh.net]
 ||t*.zcvh.net^
 
-# [zog.link]
-||zog.link^
-
-# [gemius.pl]
-||gemius.pl^
-
-# [gpm-ssp.ru]
-||gpm-ssp.ru^
-
-# [zvuk.com]
-||alloy-web.zvuk.com^
-
-# [traffmovie.com]
-||traffmovie.com^
-
-# [mtgglobals.com]
-||mtgglobals.com^
-
-# [rayjump.com]
-||rayjump.com^
-
-# [cdek.ru]
-||supersentry.cdek.ru^
-
-# [expf.ru]
-||expf.ru^
-
-# [metriccca.ru]
-||metriccca.ru^
-
-# [sbermarketing.ru]
-||sbermarketing.ru^
-
-# [theguardian.com]
-||ophan.theguardian.com^
-
-# [itv.com]
-||cpt.itv.com^
-
-# [bngwlt.com]
-||bngwlt.com^
-
-# [ufouxbwn.com]
-||ufouxbwn.com^
-
-# [traffer.net]
-||traffer.net^
-
-# [get4click.ru]
-||get4click.ru^
-
-# [ipvertnet.com]
-||ipvertnet.com^
-
-# [21wiz.com]
-||21wiz.com^
-
-# [bracdn.online]
-||bracdn.online^
-
-# [moviead55.ru]
-||moviead55.ru^
-
-# [imgsniper.com]
-||imgsniper.com^
-
-# [wavesend.ru]
-||wavesend.ru^
-
-# [actionpay.ru]
-||actionpay.ru^
-
-# [bannerhost.ru]
-||bannerhost.ru^
-
-# [adtec.ru]
-||adtec.ru^
-
-# [ttarget.ru]
-||ttarget.ru^
-
-# [videonow.ru]
-||videonow.ru^
-
-# [html-load.cc]
-||html-load.cc^
-
-# [survicate.com]
-||survicate.com^
-
-# [tikhomira.link]
-||tikhomira.link^
-
-# [rstprgapipt.com]
-||rstprgapipt.com^
-
 # [zimoyzharko.org]
 ||zimoyzharko.org^
 
-# [cxsqmfmb.com]
-||cxsqmfmb.com^
+# [zog.link]
+||zog.link^
 
-# [onvmu.com]
-||onvmu.com^
-
-# [network-lc.ru]
-||network-lc.ru^
+# [zvuk.com]
+||alloy-web.zvuk.com^
